@@ -57,43 +57,43 @@ A imagem abaixo mostra as seleções feitas no conjunto de dados, chegando no n�
 Os códigos completos estão disponíveis em `Github <https://github.com/Lucas-Buk/colorectal>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Bibliotecas e Funções
 
    Funções
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Análise dos dados
 
    Colorretal - preprocessing
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Óbito geral
 
    Colorretal - obito_geral
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Óbito por câncer
 
    Colorretal - obito_cancer
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Sobrevida um ano
 
    Colorretal - vivo_ano1
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Sobrevida três anos
 
    Colorretal - vivo_ano3
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Sobrevida cinco anos
 
    Colorretal - vivo_ano5
