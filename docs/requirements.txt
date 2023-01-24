@@ -12,3 +12,4 @@ lightgbm
 ipython
 ipykernel
 shap
+optuna
