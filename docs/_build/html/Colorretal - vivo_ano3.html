@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introdução &mdash; Documentação do estudo de câncer colorretal</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introdução" href="Colorretal%20-%20vivo_ano5.html" />
+    <link rel="prev" title="Introdução" href="Colorretal%20-%20vivo_ano1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Estudo Câncer Colorretal
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Bibliotecas e Funções</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Fun%C3%A7%C3%B5es.html"><strong>Importações</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fun%C3%A7%C3%B5es.html#Funções"><strong>Funções</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Análise dos dados</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html"><strong>Leitura dos dados</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html#Análise-dos-dados"><strong>Análise dos dados</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html#Criação-de-novas-colunas"><strong>Criação de novas colunas</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html#id1"><strong>Informações</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Óbito geral</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_geral.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_geral.html#Análise---Óbito-geral"><strong>Análise - Óbito geral</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Óbito por câncer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_cancer.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_cancer.html#Análise---Óbito-por-câncer"><strong>Análise - Óbito por câncer</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sobrevida um ano</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano1.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano1.html#Análise---Sobrevida-um-ano"><strong>Análise - Sobrevida um ano</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sobrevida três anos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Introdução</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#DataFrame-vivo_ano3"><strong>DataFrame vivo_ano3</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Análise---Sobrevida-três-anos"><strong>Análise - Sobrevida três anos</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Pré-processamento"><strong>Pré-processamento</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Treinamento-e-validação-dos-modelos-de-machine-learning"><strong>Treinamento e validação dos modelos de machine learning</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Naive-Bayes"><strong>Naive Bayes</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Random-Forest"><strong>Random Forest</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Optuna">Optuna</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#XGBoost"><strong>XGBoost</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Optuna</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#LightGBM"><strong>LightGBM</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Optuna</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Voting-Classifier"><strong>Voting Classifier</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sobrevida cinco anos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano5.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano5.html#Análise---Sobrevida-cinco-anos"><strong>Análise - Sobrevida cinco anos</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Estudo Câncer Colorretal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><strong>Introdução</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Colorretal - vivo_ano3.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars and line breaks on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+    white-space: pre;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.jp-RenderedHTMLCommon thead,
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.jp-RenderedHTMLCommon th,
+div.rendered_html th {
+  font-weight: bold;
+}
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.jp-RenderedHTMLCommon tbody tr:hover,
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="Introdução">
+<h1><strong>Introdução</strong><a class="headerlink" href="#Introdução" title="Permalink to this heading"></a></h1>
+<p><strong>Ideia Geral</strong></p>
+<p>Utilizando os dados de câncer da FOSP, somente do tipo colorretal, serão utilizados quatro modelos de machine learning diferentes, com o intuito de testar diferentes tipos de algoritmo na classificação de sobrevida por três anos.</p>
+<p>O label é 0 se o paciente não sobreviveu após três anos do diagnóstico e 1 se sobreviveu.</p>
+<p><strong>Modelos de ML</strong></p>
+<p>Foram escolhidos os modelos Naive Bayes, que utiliza o Teorema de Bayes para realizar as previsões, Random Forest, XGBoost e LightGBM, que utilizam os conceitos de árvores de decisão, além de bagging e boosting. Além disso, será testado um modelo de votação com os melhores classificadores obtidos, visando obter um algoritmo ainda mais acertivo.</p>
+<p><strong>Validação dos modelos</strong></p>
+<p>Para validar os modelos treinados foi utilizada primeiramente a matriz de confusão, sendo possível avaliar os acertos em ambas as classes. Para entender de houve overfitting nos modelos, foi utilizada a curva ROC para os conjuntos de treino e teste, comparando a métrica AUC entre ambos os conjuntos.</p>
+<p>Por fim, os modelos Random Forest, XGBoost e LightGBM oferecem a possibilidade de saber quais foram as features mais importantes, ou seja, que mais influenciam na previsão das classes. Assim, foram mostradas duas maneiras diferentes de analisar a importância das variáveis de entrada, uma usando a própria função dos modelos e outra usando a biblioteca SHAP, que mostra a influência das features em ambas as classes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Leitura dos dados</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_sp_labels.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(31916, 37)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+  <div id="df-996fe874-6ecf-4e7e-bc2f-c3a3c2b8d3c1">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ESCOLARI</th>
+      <th>IDADE</th>
+      <th>SEXO</th>
+      <th>IBGE</th>
+      <th>CATEATEND</th>
+      <th>DIAGPREV</th>
+      <th>EC</th>
+      <th>ECGRUP</th>
+      <th>TRATHOSP</th>
+      <th>NENHUM</th>
+      <th>...</th>
+      <th>IBGEATEN</th>
+      <th>ULTICONS</th>
+      <th>ULTIDIAG</th>
+      <th>ULTITRAT</th>
+      <th>obito_geral</th>
+      <th>obito_cancer</th>
+      <th>vivo_ano1</th>
+      <th>vivo_ano3</th>
+      <th>vivo_ano5</th>
+      <th>ESCOLARI_2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4</td>
+      <td>19</td>
+      <td>2</td>
+      <td>3538709</td>
+      <td>9</td>
+      <td>2</td>
+      <td>IV</td>
+      <td>IV</td>
+      <td>I</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3538709</td>
+      <td>4985</td>
+      <td>4985</td>
+      <td>4951</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9</td>
+      <td>19</td>
+      <td>1</td>
+      <td>3537107</td>
+      <td>2</td>
+      <td>2</td>
+      <td>IIIA</td>
+      <td>III</td>
+      <td>I</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3509502</td>
+      <td>2680</td>
+      <td>2744</td>
+      <td>2674</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>19</td>
+      <td>1</td>
+      <td>3516200</td>
+      <td>9</td>
+      <td>2</td>
+      <td>IIB</td>
+      <td>II</td>
+      <td>F</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3516200</td>
+      <td>4725</td>
+      <td>4734</td>
+      <td>4719</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 37 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-996fe874-6ecf-4e7e-bc2f-c3a3c2b8d3c1')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-996fe874-6ecf-4e7e-bc2f-c3a3c2b8d3c1 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-996fe874-6ecf-4e7e-bc2f-c3a3c2b8d3c1');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valores faltantes</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ESCOLARI     0
+CONSDIAG     0
+DIAGTRAT     0
+ANODIAG      0
+FAIXAETAR    0
+DRS          0
+dtype: int64
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correlação com a saída</span>
+<span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">[</span><span class="s1">&#39;vivo_ano3&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+vivo_ano3       1.000000
+ULTIDIAG        0.757341
+ULTICONS        0.753018
+ULTITRAT        0.751754
+vivo_ano5       0.698727
+vivo_ano1       0.529451
+obito_cancer    0.384454
+obito_geral     0.370056
+ANODIAG         0.230827
+CIRURGIA        0.214017
+ULTINFO         0.170955
+OUTROS          0.079260
+IDADE           0.071979
+CATEATEND       0.062563
+DIAGTRAT        0.048280
+RADIO           0.044041
+RECNENHUM       0.041957
+TRATCONS        0.038209
+HORMONIO        0.036303
+SEXO            0.034967
+Name: vivo_ano3, dtype: float64
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quantidade de pacientes em cada classe da saída</span>
+<span class="n">df</span><span class="o">.</span><span class="n">vivo_ano3</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0    18278
+1    13638
+Name: vivo_ano3, dtype: int64
+</pre></div></div>
+</div>
+<section id="DataFrame-vivo_ano3">
+<h2><strong>DataFrame vivo_ano3</strong><a class="headerlink" href="#DataFrame-vivo_ano3" title="Permalink to this heading"></a></h2>
+<p>Antes de realizar o pré-processamento dos dados é necessário filtrar os dados, de modo a retirar pacientes que não foram acompanhados por pelo menos <strong>três anos</strong> e que a última informação consta como vivos.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dataset da sobrevida de três anos</span>
+<span class="n">df_ano3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">obito_geral</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">vivo_ano3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_ano3</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(26231, 37)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_ano3</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+  <div id="df-11019b8b-9fc9-4821-bc8c-2e94b0fa71d4">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ESCOLARI</th>
+      <th>IDADE</th>
+      <th>SEXO</th>
+      <th>IBGE</th>
+      <th>CATEATEND</th>
+      <th>DIAGPREV</th>
+      <th>EC</th>
+      <th>ECGRUP</th>
+      <th>TRATHOSP</th>
+      <th>NENHUM</th>
+      <th>...</th>
+      <th>IBGEATEN</th>
+      <th>ULTICONS</th>
+      <th>ULTIDIAG</th>
+      <th>ULTITRAT</th>
+      <th>obito_geral</th>
+      <th>obito_cancer</th>
+      <th>vivo_ano1</th>
+      <th>vivo_ano3</th>
+      <th>vivo_ano5</th>
+      <th>ESCOLARI_2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4</td>
+      <td>19</td>
+      <td>2</td>
+      <td>3538709</td>
+      <td>9</td>
+      <td>2</td>
+      <td>IV</td>
+      <td>IV</td>
+      <td>I</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3538709</td>
+      <td>4985</td>
+      <td>4985</td>
+      <td>4951</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9</td>
+      <td>19</td>
+      <td>1</td>
+      <td>3537107</td>
+      <td>2</td>
+      <td>2</td>
+      <td>IIIA</td>
+      <td>III</td>
+      <td>I</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3509502</td>
+      <td>2680</td>
+      <td>2744</td>
+      <td>2674</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>19</td>
+      <td>1</td>
+      <td>3516200</td>
+      <td>9</td>
+      <td>2</td>
+      <td>IIB</td>
+      <td>II</td>
+      <td>F</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3516200</td>
+      <td>4725</td>
+      <td>4734</td>
+      <td>4719</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 37 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-11019b8b-9fc9-4821-bc8c-2e94b0fa71d4')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-11019b8b-9fc9-4821-bc8c-2e94b0fa71d4 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-11019b8b-9fc9-4821-bc8c-2e94b0fa71d4');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div></div>
+</div>
+</section>
+</section>
+<section id="Análise---Sobrevida-três-anos">
+<h1><strong>Análise - Sobrevida três anos</strong><a class="headerlink" href="#Análise---Sobrevida-três-anos" title="Permalink to this heading"></a></h1>
+<section id="Pré-processamento">
+<h2><strong>Pré-processamento</strong><a class="headerlink" href="#Pré-processamento" title="Permalink to this heading"></a></h2>
+<p>Como o dataset já foi limpo anteriormente, aqui na etapa de pré-processamento será realizada a divisão dos dados em treino e teste, fazer a codificação das colunas textuais para colunas numéricas e a normalização dos dados. Com isso, temos os dados prontos para o treinamento dos modelos de machine learning e consequentemente sua validação.</p>
+<p>Primeiro serão definidas as colunas que não serão utilizadas como features, assim, foi escolhido manter a coluna <code class="docutils literal notranslate"><span class="pre">IDADE</span></code>, então a coluna <code class="docutils literal notranslate"><span class="pre">FAIXAETAR</span></code> será retirada. O mesmo ocorre com a coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code>, retirando a coluna <code class="docutils literal notranslate"><span class="pre">ECGRUP</span></code>. Por fim, as outras colunas contidas na <code class="docutils literal notranslate"><span class="pre">list_drop</span></code> são possíveis saídas para os modelos, mas estamos interessados somente na sobrevida de três anos, por isso só ela será mantida como label e as outras serão retiradas.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list_drop</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FAIXAETAR&#39;</span><span class="p">,</span> <span class="s1">&#39;ULTICONS&#39;</span><span class="p">,</span> <span class="s1">&#39;ULTIDIAG&#39;</span><span class="p">,</span> <span class="s1">&#39;ULTITRAT&#39;</span><span class="p">,</span> <span class="s1">&#39;obito_geral&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;vivo_ano1&#39;</span><span class="p">,</span> <span class="s1">&#39;vivo_ano5&#39;</span><span class="p">,</span> <span class="s1">&#39;ULTINFO&#39;</span><span class="p">,</span> <span class="s1">&#39;obito_cancer&#39;</span><span class="p">,</span> <span class="s1">&#39;ECGRUP&#39;</span><span class="p">,</span> <span class="s1">&#39;ESCOLARI&#39;</span><span class="p">]</span>
+
+<span class="n">lb</span> <span class="o">=</span> <span class="s1">&#39;vivo_ano3&#39;</span>
+</pre></div>
+</div>
+</div>
+<p>Uma função foi criada para realizar o pré-processamento inteiro, chamada <code class="docutils literal notranslate"><span class="pre">preprocessing</span></code>, internamente ela utiliza outras funções criadas que são: <code class="docutils literal notranslate"><span class="pre">get_train_test</span></code> (divide os dados em treino e teste), <code class="docutils literal notranslate"><span class="pre">train_preprocessing</span></code> (prepara os dados de treino) e <code class="docutils literal notranslate"><span class="pre">test_preprocessing</span></code> (prepara os dados de teste).</p>
+<blockquote>
+<div><p>Mais detalhes em <a href="#id3"><span class="problematic" id="id4">`funções &lt;&gt;`__</span></a>.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">feat_cols</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="p">(</span><span class="n">df_ano3</span><span class="p">,</span> <span class="n">list_drop</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span>
+                                                            <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+                                                            <span class="n">balance_data</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                            <span class="n">encoder_type</span><span class="o">=</span><span class="s1">&#39;LabelEncoder&#39;</span><span class="p">,</span>
+                                                            <span class="n">norm_name</span><span class="o">=</span><span class="s1">&#39;StandardScaler&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+X_train = (19673, 25), X_test = (6558, 25)
+y_train = (19673,), y_test = (6558,)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1    0.5199
+0    0.4801
+Name: vivo_ano3, dtype: float64
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_test</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1    0.519976
+0    0.480024
+Name: vivo_ano3, dtype: float64
+</pre></div></div>
+</div>
+</section>
+<section id="Treinamento-e-validação-dos-modelos-de-machine-learning">
+<h2><strong>Treinamento e validação dos modelos de machine learning</strong><a class="headerlink" href="#Treinamento-e-validação-dos-modelos-de-machine-learning" title="Permalink to this heading"></a></h2>
+<p>Depois das etapas de preparação, os dados estão prontos para serem utilizados nos modelos escolhidos.</p>
+<section id="Naive-Bayes">
+<h3><strong>Naive Bayes</strong><a class="headerlink" href="#Naive-Bayes" title="Permalink to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação e treinamento do modelo Naive Bayes</span>
+<span class="n">nb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+GaussianNB()
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de confusão</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_21_0.png" src="_images/Colorretal_-_vivo_ano3_21_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.540     0.868     0.666      3148
+           1      0.723     0.317     0.441      3410
+
+    accuracy                          0.582      6558
+   macro avg      0.631     0.593     0.553      6558
+weighted avg      0.635     0.582     0.549      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>Claramente percebe-se que o modelo previu boa parte dos dados como sendo da classe 0, portanto não teve um aprendizado satisfatório.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Na matriz de confusão, buscamos uma diagonal principal equilibrada e com a maior acertividade possível.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_23_0.png" src="_images/Colorretal_-_vivo_ano3_23_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>Pelas curvas ROC, pode-se dizer que não há overfitting, mas o modelo é ruim para a previsão da classe 1, portanto qualquer análise além dessa não possui tanta relevância.</p>
+</div></blockquote>
+</section>
+<section id="Random-Forest">
+<h3><strong>Random Forest</strong><a class="headerlink" href="#Random-Forest" title="Permalink to this heading"></a></h3>
+<p>O modelo Random Forest é mais complexo em relação ao Naive Bayes, assim alguns hiperparâmetros serão definidos para obter um modelo base e depois será realizada a busca dos melhores parâmetros utilizando o Optuna.</p>
+<p>Os parâmetros definidos para este primeiro modelo serão:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random_state</span></code>: para repetibilidade do treinamento do modelo. Será utilizado na busca pelos hiperparâmetros também, sempre como mesmo valor definido na variável <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_depth</span></code>: será definido como 8, pois o padrão do modelo é não ter profundidade máxima para as árvores, o que dificulta e faz o treinamento ser muito longo, além da maior chance de overfitting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class_weight</span></code>: usado para definir os pesos de cada classe no treinamento do modelo, muito útil quando temos classes desbalanceadas no conjunto de dados, como neste caso.</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># SP</span>
+<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+                            <span class="n">class_weight</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mf">1.44</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+                            <span class="n">max_depth</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                            <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">)</span>
+
+<span class="n">rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RandomForestClassifier(class_weight={0: 1.44, 1: 1}, criterion=&#39;entropy&#39;,
+                       max_depth=8, random_state=10)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_28_0.png" src="_images/Colorretal_-_vivo_ano3_28_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.722     0.738     0.730      3148
+           1      0.753     0.738     0.746      3410
+
+    accuracy                          0.738      6558
+   macro avg      0.738     0.738     0.738      6558
+weighted avg      0.738     0.738     0.738      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>A matriz obtida para o modelo Random Forest apresentou diagonal equilibrada em ambas as classes, com 74% de acurácia.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">show_tree</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_30_0.png" src="_images/Colorretal_-_vivo_ano3_30_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_31_0.png" src="_images/Colorretal_-_vivo_ano3_31_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>Como a métrica AUC possui valores próximos para o conjunto de treino e de teste, 0,857 e 0,816 respectivamente, pode-se dizer que há apenas um pouco de overfitting, não sendo algo de grande preocupação.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_feat_importances</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_33_0.png" src="_images/Colorretal_-_vivo_ano3_33_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>As features mais importantes nesta visualização são <code class="docutils literal notranslate"><span class="pre">EC</span></code>, com uma grande vantagem, <code class="docutils literal notranslate"><span class="pre">ANODIAG</span></code>, <code class="docutils literal notranslate"><span class="pre">CIRURGIA</span></code> e <code class="docutils literal notranslate"><span class="pre">TRATHOSP</span></code>.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_shap_values</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_35_0.png" src="_images/Colorretal_-_vivo_ano3_35_0.png" />
+</div>
+</div>
+<p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante aqui também, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 0 (não sobreviveu ao terceiro ano após o diagnóstico). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 1. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
+<p>O raciocínio para analisar as outras colunas é o mesmo utilizado para o estadiamento clínico.</p>
+<section id="Optuna">
+<h4>Optuna<a class="headerlink" href="#Optuna" title="Permalink to this heading"></a></h4>
+<p>Para fazer a busca pelos melhores hiperparâmetros, será utilizado a biblioteca Optuna, definindo o intervalo para os parâmetros do modelo a serem buscados.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Folds com a mesma proporção das classes</span>
+<span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função com o modelos e seus parâmetros, que terá sua métrica maximizada</span>
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+
+    <span class="n">n_estimators</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">max_depth</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;max_depth&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+    <span class="n">min_samples_split</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_samples_split&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">min_samples_leaf</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_samples_leaf&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="n">max_samples</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;max_samples&#39;</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_categorical</span><span class="p">(</span><span class="s1">&#39;criterion&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="s1">&#39;entropy&#39;</span><span class="p">])</span>
+
+    <span class="bp">cls</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">,</span>
+                                 <span class="n">max_depth</span><span class="o">=</span><span class="n">max_depth</span><span class="p">,</span>
+                                 <span class="n">min_samples_split</span><span class="o">=</span><span class="n">min_samples_split</span><span class="p">,</span>
+                                 <span class="n">min_samples_leaf</span><span class="o">=</span><span class="n">min_samples_leaf</span><span class="p">,</span>
+                                 <span class="n">max_samples</span><span class="o">=</span><span class="n">max_samples</span><span class="p">,</span>
+                                 <span class="n">criterion</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span>
+                                 <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
+                           <span class="n">cv</span><span class="o">=</span><span class="n">skf</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;balanced_accuracy&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do estudo e procura pelos hiperparâmetros</span>
+<span class="n">studyRF</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">RandomSampler</span><span class="p">(</span><span class="n">seed</span><span class="p">))</span>
+<span class="n">studyRF</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor tentativa</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best trial is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyRF</span><span class="o">.</span><span class="n">best_trial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The best trial is:
+FrozenTrial(number=19, state=TrialState.COMPLETE, values=[0.7653298572918547], datetime_start=datetime.datetime(2023, 1, 20, 17, 16, 36, 696502), datetime_complete=datetime.datetime(2023, 1, 20, 17, 17, 7, 612494), params={&#39;n_estimators&#39;: 126, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 10, &#39;min_samples_leaf&#39;: 4, &#39;max_samples&#39;: 0.8999999999999999, &#39;criterion&#39;: &#39;entropy&#39;}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;min_samples_split&#39;: IntDistribution(high=10, log=False, low=2, step=1), &#39;min_samples_leaf&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;max_samples&#39;: FloatDistribution(high=1.0, log=False, low=0.7, step=0.1), &#39;criterion&#39;: CategoricalDistribution(choices=(&#39;gini&#39;, &#39;entropy&#39;))}, trial_id=19, value=None)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor score</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best value is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyRF</span><span class="o">.</span><span class="n">best_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Melhores parâmetros</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best parameters are: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyRF</span><span class="o">.</span><span class="n">best_params</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The best value is:
+0.7653298572918547
+The best parameters are:
+{&#39;n_estimators&#39;: 126, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 10, &#39;min_samples_leaf&#39;: 4, &#39;max_samples&#39;: 0.8999999999999999, &#39;criterion&#39;: &#39;entropy&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">studyRF</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>                <div id="9a2dd1fa-5eca-4e2d-957a-aaf60bef9200" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("9a2dd1fa-5eca-4e2d-957a-aaf60bef9200")) {                    Plotly.newPlot(                        "9a2dd1fa-5eca-4e2d-957a-aaf60bef9200",                        [{"mode":"markers","name":"Objective Value","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99],"y":[0.7330038532658095,0.7430459394794602,0.7631395173580391,0.7574412852806803,0.7623047864413992,0.7359654829350635,0.7647145711881992,0.7592645759749855,0.7612050752518961,0.7327660156251647,0.7592725617143482,0.7632275967141517,0.7309335602351521,0.7389581637662267,0.760172390767198,0.7628300611619074,0.7420559765503106,0.7483637554713007,0.7426798348442408,0.7653298572918547,0.7638915831843511,0.7629140448610863,0.7620926145397234,0.7340716604728538,0.7626791685047282,0.7635176425741579,0.7316580605517127,0.737765890891682,0.763207649277424,0.7588905235058908,0.7626168970708759,0.7439090123637878,0.7587438288515866,0.7642463120957808,0.7636218444410285,0.7612987572889448,0.7635752448918283,0.7541907590273295,0.762608741253296,0.7381556503814625,0.7565121164418164,0.7582756532975934,0.7630859187469441,0.7645285767416892,0.7638228739217283,0.7623379416404228,0.7635539579334987,0.7634165394082529,0.7444405602251513,0.759321783375345,0.762674282774504,0.7645837666244617,0.7558602654645715,0.7586042616852644,0.7613135019673278,0.7381776776777507,0.7434320672903307,0.7495198601750764,0.7631111658773914,0.761701861313746,0.7392558289871647,0.7634936144040229,0.7634964832808788,0.7358960902861539,0.7606038532097902,0.7322319228972407,0.7643265472518675,0.7648782647479395,0.7645038601799866,0.7645725298439279,0.7414330258378067,0.7615275846995871,0.7645722392044209,0.7323177624274582,0.7433630239055298,0.7609809394620599,0.7630336234654225,0.7489286909518791,0.7328983112333829,0.7646654224313764,0.7617819330900905,0.7546239974596429,0.7602774359416586,0.7565821570009895,0.762760275766218,0.7489372501504898,0.7432128194012495,0.7492102611516993,0.7637530233695797,0.7616471845656706,0.7544729652152535,0.7389777368584046,0.7645586250597269,0.7494616330957209,0.7556412136370353,0.7641972205090338,0.7393967268713789,0.7632893706460837,0.7622071078735867,0.7602089657977018],"type":"scatter"},{"name":"Best Value","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99],"y":[0.7330038532658095,0.7430459394794602,0.7631395173580391,0.7631395173580391,0.7631395173580391,0.7631395173580391,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7647145711881992,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547,0.7653298572918547],"type":"scatter"}],                        {"title":{"text":"Optimization History Plot"},"xaxis":{"title":{"text":"Trial"}},"yaxis":{"title":{"text":"Objective Value"}},"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}}},                        {"responsive": true}                    ).then(function(){
+
+var gd = document.getElementById('9a2dd1fa-5eca-4e2d-957a-aaf60bef9200');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+</body>
+</html></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modelo com os melhores parâmetros</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">studyRF</span><span class="o">.</span><span class="n">best_params</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;random_state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seed</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;class_weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">1.725</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="n">rf_optuna</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">rf_optuna</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+
+<span class="n">rf_optuna</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RandomForestClassifier(class_weight={0: 1.725, 1: 1}, criterion=&#39;entropy&#39;,
+                       max_depth=17, max_samples=0.8999999999999999,
+                       min_samples_leaf=4, min_samples_split=10,
+                       n_estimators=126, random_state=10)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de confusão do modelo Random Forest otimizado</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">rf_optuna</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_46_0.png" src="_images/Colorretal_-_vivo_ano3_46_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.728     0.743     0.736      3148
+           1      0.758     0.744     0.751      3410
+
+    accuracy                          0.744      6558
+   macro avg      0.743     0.744     0.743      6558
+weighted avg      0.744     0.744     0.744      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>Há uma melhora de acurácia em relação ao primeiro modelo testado, passando um pouco de 74%.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC do modelo otimizado</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">rf_optuna</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_48_0.png" src="_images/Colorretal_-_vivo_ano3_48_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>A curva ROC mostra que o modelo possui overfitting, pois para o conjunto de treino temos AUC = 0,953 e para o teste AUC = 0,823, essa diferença caracteriza o problema.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="XGBoost">
+<h3><strong>XGBoost</strong><a class="headerlink" href="#XGBoost" title="Permalink to this heading"></a></h3>
+<p>O modelo XGBoost também terá alguns hiperparâmetros definidos para obter um modelo base e depois será realizada a busca dos melhores parâmetros utilizando o Optuna.</p>
+<p>Os parâmetros definidos para este primeiro modelo serão:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random_state</span></code>: para repetibilidade do treinamento do modelo. Será utilizado na busca pelos hiperparâmetros também, sempre como mesmo valor definido na variável <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_depth</span></code>: será definido como 5, pois o padrão do modelo é 3 de profundidade máxima para as árvores, deixando o modelo muito simples.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale_pos_weight</span></code>: usado para definir o peso da classe 1 no treinamento do modelo, pois temos classes desbalanceadas.</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação e treinamento do modelo XGBoost</span>
+<span class="n">xgboost</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                        <span class="n">scale_pos_weight</span><span class="o">=</span><span class="mf">0.706</span><span class="p">,</span>
+                        <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
+<span class="n">xgboost</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+XGBClassifier(max_depth=5, random_state=10, scale_pos_weight=0.706)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de confusão</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">xgboost</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_53_0.png" src="_images/Colorretal_-_vivo_ano3_53_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.733     0.748     0.740      3148
+           1      0.763     0.748     0.755      3410
+
+    accuracy                          0.748      6558
+   macro avg      0.748     0.748     0.748      6558
+weighted avg      0.748     0.748     0.748      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>A matriz obtida para o modelo XGBoost apresentou diagonal equilibrada em ambas as classes, com 75% de acurácia.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">xgboost</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_55_0.png" src="_images/Colorretal_-_vivo_ano3_55_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>Como a métrica AUC possui valores próximos para o conjunto de treino e de teste, 0,871 e 0,826 respectivamente, pode-se dizer que há apenas um pouco de overfitting, não sendo algo de grande preocupação.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importância das features</span>
+<span class="n">plot_feat_importances</span><span class="p">(</span><span class="n">xgboost</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_57_0.png" src="_images/Colorretal_-_vivo_ano3_57_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>As features mais importantes nesta visualização são <code class="docutils literal notranslate"><span class="pre">EC</span></code>, com boa vantagem, <code class="docutils literal notranslate"><span class="pre">QUIMIO</span></code>, <code class="docutils literal notranslate"><span class="pre">CIRURGIA</span></code> e <code class="docutils literal notranslate"><span class="pre">TRATHOSP</span></code>.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importância das features pelo valores SHAP</span>
+<span class="n">plot_shap_values</span><span class="p">(</span><span class="n">xgboost</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_59_0.png" src="_images/Colorretal_-_vivo_ano3_59_0.png" />
+</div>
+</div>
+<p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante aqui também, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 0 (não sobreviveu ao terceiro ano após o diagnóstico). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 1. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
+<p>O raciocínio para analisar as outras colunas é o mesmo utilizado para o estadiamento clínico.</p>
+<section id="id1">
+<h4>Optuna<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Para fazer a busca pelos melhores hiperparâmetros, será utilizado a biblioteca Optuna, definindo o intervalo para os parâmetros do modelo a serem buscados.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Folds com a mesma proporção das classes</span>
+<span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função com o modelos e seus parâmetros, que terá sua métrica maximizada</span>
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+
+    <span class="n">n_estimators</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">max_depth</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;max_depth&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+    <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+    <span class="n">gamma</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">min_child_weight</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_child_weight&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="n">colsample_bytree</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;colsample_bytree&#39;</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="bp">cls</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">,</span>
+                        <span class="n">max_depth</span><span class="o">=</span><span class="n">max_depth</span><span class="p">,</span>
+                        <span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">,</span>
+                        <span class="n">gamma</span><span class="o">=</span><span class="n">gamma</span><span class="p">,</span>
+                        <span class="n">min_child_weight</span><span class="o">=</span><span class="n">min_child_weight</span><span class="p">,</span>
+                        <span class="n">colsample_bytree</span><span class="o">=</span><span class="n">colsample_bytree</span><span class="p">,</span>
+                        <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
+                           <span class="n">cv</span><span class="o">=</span><span class="n">skf</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;balanced_accuracy&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do estudo e procura pelos hiperparâmetros</span>
+<span class="n">studyXGB</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">RandomSampler</span><span class="p">(</span><span class="n">seed</span><span class="p">))</span>
+<span class="n">studyXGB</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor tentativa</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best trial is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyXGB</span><span class="o">.</span><span class="n">best_trial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The best trial is:
+FrozenTrial(number=52, state=TrialState.COMPLETE, values=[0.7667623153444152], datetime_start=datetime.datetime(2023, 1, 20, 18, 33, 11, 420829), datetime_complete=datetime.datetime(2023, 1, 20, 18, 33, 28, 936221), params={&#39;n_estimators&#39;: 209, &#39;max_depth&#39;: 3, &#39;learning_rate&#39;: 0.2, &#39;gamma&#39;: 0.3, &#39;min_child_weight&#39;: 4, &#39;colsample_bytree&#39;: 0.3}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;learning_rate&#39;: FloatDistribution(high=0.2, log=False, low=0.05, step=0.05), &#39;gamma&#39;: FloatDistribution(high=0.3, log=False, low=0.0, step=0.1), &#39;min_child_weight&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;colsample_bytree&#39;: FloatDistribution(high=0.7, log=False, low=0.3, step=0.1)}, trial_id=52, value=None)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor score</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best value is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyXGB</span><span class="o">.</span><span class="n">best_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Melhores parâmetros</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best parameters are: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyXGB</span><span class="o">.</span><span class="n">best_params</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The best value is:
+0.7667623153444152
+The best parameters are:
+{&#39;n_estimators&#39;: 209, &#39;max_depth&#39;: 3, &#39;learning_rate&#39;: 0.2, &#39;gamma&#39;: 0.3, &#39;min_child_weight&#39;: 4, &#39;colsample_bytree&#39;: 0.3}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">studyXGB</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>                <div id="a3f68a02-258f-426c-83a8-eac7ba0035fd" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("a3f68a02-258f-426c-83a8-eac7ba0035fd")) {                    Plotly.newPlot(                        "a3f68a02-258f-426c-83a8-eac7ba0035fd",                        [{"mode":"markers","name":"Objective Value","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99],"y":[0.7652852138661858,0.760753312933728,0.7603201361994343,0.7523187277531154,0.7626415535264315,0.7510024345729631,0.7617467039194095,0.7566294203971943,0.7645030880833765,0.7526246925015012,0.7516235871513758,0.7644085627387379,0.7641977221989084,0.7551748878888306,0.7606398017854143,0.7657084607453053,0.7601807618546218,0.7577003412287309,0.7607614177078037,0.7642045083438689,0.7632422697965335,0.7638184359378289,0.7582184898009522,0.7543798432697739,0.7606634214679164,0.7664934588634098,0.7608749958791432,0.7580234539827233,0.7518136062825083,0.7643509446149184,0.7652082912759175,0.7655644748596723,0.765952543327915,0.7640378779363282,0.7610740322990074,0.7537865593301792,0.7469903691588897,0.7647133214464248,0.7617168980051048,0.7644781070838989,0.7598264932038441,0.766140041983942,0.7486238275836183,0.7551127177314151,0.7665065004112138,0.7496674711559754,0.7614316770801899,0.7585609315434403,0.7624232293851799,0.7508013981100883,0.763770909421028,0.7591719579462012,0.7667623153444152,0.7630037331818567,0.7648763861938729,0.7650522009669956,0.76499492478512,0.7550935958642655,0.7519653915975872,0.7613452953787939,0.765672161836068,0.7628802112810563,0.7635580716324087,0.7612003594985677,0.7661994177605486,0.7634331321699597,0.756432731965019,0.7484910348990298,0.750298618147099,0.7582351004875524,0.7552355058171077,0.7646104769044637,0.7505727799710589,0.7563484128557537,0.7598995121413614,0.7614605700025019,0.7426098238214018,0.7476558755006536,0.7543026464450703,0.7475317885840609,0.7577666822258617,0.7642391719200993,0.7543936893122906,0.7626918541552448,0.7509149561860031,0.7624780839231621,0.75386995679685,0.7603454614780045,0.7598261814556977,0.7621498500736773,0.7648765229665977,0.7598339600939786,0.7625080118735468,0.7648299836338719,0.7520365624067493,0.7566861614305946,0.7499437518189905,0.7643869933659528,0.7608019845227233,0.7622362124902204],"type":"scatter"},{"name":"Best Value","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99],"y":[0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7652852138661858,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7657084607453053,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7664934588634098,0.7665065004112138,0.7665065004112138,0.7665065004112138,0.7665065004112138,0.7665065004112138,0.7665065004112138,0.7665065004112138,0.7665065004112138,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152,0.7667623153444152],"type":"scatter"}],                        {"title":{"text":"Optimization History Plot"},"xaxis":{"title":{"text":"Trial"}},"yaxis":{"title":{"text":"Objective Value"}},"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}}},                        {"responsive": true}                    ).then(function(){
+
+var gd = document.getElementById('a3f68a02-258f-426c-83a8-eac7ba0035fd');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+</body>
+</html></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modelo com os melhores parâmetros</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">studyXGB</span><span class="o">.</span><span class="n">best_params</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;random_state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seed</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;scale_pos_weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.72</span>
+
+<span class="n">xgb_optuna</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+<span class="n">xgb_optuna</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+
+<span class="n">xgb_optuna</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+XGBClassifier(colsample_bytree=0.3, gamma=0.3, learning_rate=0.2,
+              min_child_weight=4, n_estimators=209, random_state=10,
+              scale_pos_weight=0.72)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de confusão do modelo XGBoost otimizado</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">xgb_optuna</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_70_0.png" src="_images/Colorretal_-_vivo_ano3_70_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.733     0.749     0.741      3148
+           1      0.763     0.748     0.755      3410
+
+    accuracy                          0.748      6558
+   macro avg      0.748     0.748     0.748      6558
+weighted avg      0.749     0.748     0.748      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>Após a escolha dos hiperparâmetros, a acurácia de ambos os modelos ficou em torno de 75%.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC do modelo otimizado</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">xgb_optuna</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_72_0.png" src="_images/Colorretal_-_vivo_ano3_72_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>A curva ROC mostra que o modelo possui um pouco de overfitting, pois para o conjunto de treino temos AUC = 0,867 e para o teste AUC = 0,824, essa diferença caracteriza o problema.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="LightGBM">
+<h3><strong>LightGBM</strong><a class="headerlink" href="#LightGBM" title="Permalink to this heading"></a></h3>
+<p>O modelo LightGBM também terá alguns hiperparâmetros definidos para obter um modelo base e depois será realizada a busca dos melhores parâmetros utilizando o Optuna.</p>
+<p>Os parâmetros definidos para este primeiro modelo serão:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random_state</span></code>: para repetibilidade do treinamento do modelo. Será utilizado na busca pelos hiperparâmetros também, sempre como mesmo valor definido na variável <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_depth</span></code>: será definido como 5, pois o padrão do modelo é 3 de profundidade máxima para as árvores, deixando o modelo muito simples.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class_weight</span></code>: usado para definir os pesos de cada classe no treinamento do modelo quando têm-se classes desbalanceadas.</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação e treinamento do modelo LightGBM</span>
+<span class="n">lgbm</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                      <span class="n">class_weight</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+                      <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
+<span class="n">lgbm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+LGBMClassifier(class_weight={0: 1.4, 1: 1}, max_depth=5, random_state=10)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de confusão</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">lgbm</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_77_0.png" src="_images/Colorretal_-_vivo_ano3_77_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.730     0.745     0.737      3148
+           1      0.760     0.746     0.753      3410
+
+    accuracy                          0.745      6558
+   macro avg      0.745     0.745     0.745      6558
+weighted avg      0.746     0.745     0.745      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>A matriz obtida para o modelo LightGBM apresentou diagonal equilibrada em ambas as classes, com 74% de acurácia.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">lgbm</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_79_0.png" src="_images/Colorretal_-_vivo_ano3_79_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>Como a métrica AUC possui valores próximos para o conjunto de treino e de teste, 0,873 e 0,825 respectivamente, pode-se dizer que há apenas um pouco de overfitting.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importância das features</span>
+<span class="n">plot_feat_importances</span><span class="p">(</span><span class="n">lgbm</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_81_0.png" src="_images/Colorretal_-_vivo_ano3_81_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>As features mais importantes nesta visualização são <code class="docutils literal notranslate"><span class="pre">IDADE</span></code>, <code class="docutils literal notranslate"><span class="pre">ANODIAG</span></code>, <code class="docutils literal notranslate"><span class="pre">EC</span></code> e <code class="docutils literal notranslate"><span class="pre">DIAGTRAT</span></code>.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importância das features pelo valores SHAP</span>
+<span class="n">plot_shap_values</span><span class="p">(</span><span class="n">lgbm</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_83_0.png" src="_images/Colorretal_-_vivo_ano3_83_0.png" />
+</div>
+</div>
+<p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 0 (não sobreviveu ao terceiro ano após o diagnóstico). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 1. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
+<p>O raciocínio para analisar as outras colunas é o mesmo utilizado para o estadiamento clínico.</p>
+<section id="id2">
+<h4>Optuna<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Para fazer a busca pelos melhores hiperparâmetros, será utilizado a biblioteca Optuna, definindo o intervalo para os parâmetros do modelo a serem buscados.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Folds com a mesma proporção das classes</span>
+<span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função com o modelos e seus parâmetros, que terá sua métrica maximizada</span>
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+
+    <span class="n">n_estimators</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">max_depth</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;max_depth&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+    <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+    <span class="n">min_child_weight</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_child_weight&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="n">colsample_bytree</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;colsample_bytree&#39;</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="bp">cls</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">,</span>
+                         <span class="n">max_depth</span><span class="o">=</span><span class="n">max_depth</span><span class="p">,</span>
+                         <span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">,</span>
+                         <span class="n">min_child_weight</span><span class="o">=</span><span class="n">min_child_weight</span><span class="p">,</span>
+                         <span class="n">colsample_bytree</span><span class="o">=</span><span class="n">colsample_bytree</span><span class="p">,</span>
+                         <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
+                           <span class="n">cv</span><span class="o">=</span><span class="n">skf</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;balanced_accuracy&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do estudo e procura pelos hiperparâmetros</span>
+<span class="n">studyLGBM</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">RandomSampler</span><span class="p">(</span><span class="n">seed</span><span class="p">))</span>
+<span class="n">studyLGBM</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor tentativa</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best trial is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_trial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The best trial is:
+FrozenTrial(number=16, state=TrialState.COMPLETE, values=[0.7681864494330416], datetime_start=datetime.datetime(2023, 1, 20, 19, 15, 34, 884840), datetime_complete=datetime.datetime(2023, 1, 20, 19, 15, 39, 523047), params={&#39;n_estimators&#39;: 171, &#39;max_depth&#39;: 11, &#39;learning_rate&#39;: 0.14, &#39;min_child_weight&#39;: 2, &#39;colsample_bytree&#39;: 0.4}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;learning_rate&#39;: FloatDistribution(high=0.2, log=False, low=0.05, step=0.01), &#39;min_child_weight&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;colsample_bytree&#39;: FloatDistribution(high=0.7, log=False, low=0.3, step=0.1)}, trial_id=16, value=None)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor score</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best value is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Melhores parâmetros</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best parameters are: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_params</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The best value is:
+0.7681864494330416
+The best parameters are:
+{&#39;n_estimators&#39;: 171, &#39;max_depth&#39;: 11, &#39;learning_rate&#39;: 0.14, &#39;min_child_weight&#39;: 2, &#39;colsample_bytree&#39;: 0.4}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">studyLGBM</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>                <div id="f5d91f63-05ef-4189-8e38-c481be1b63da" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f5d91f63-05ef-4189-8e38-c481be1b63da")) {                    Plotly.newPlot(                        "f5d91f63-05ef-4189-8e38-c481be1b63da",                        [{"mode":"markers","name":"Objective Value","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99],"y":[0.7658177411639097,0.7640991892186729,0.7664929775729243,0.7658295810323408,0.7659073961071365,0.7654243703540796,0.7616274217906969,0.7647550230910636,0.7677922038766959,0.7620309248554669,0.765317175185338,0.7648665054503402,0.7650541488654754,0.7641209323667831,0.7632028531401458,0.7644492369048793,0.7681864494330416,0.7636640626337725,0.7665178843600552,0.7661882082512509,0.7652794575571358,0.7662210717412631,0.7649981489806053,0.763307028978657,0.7658140177012587,0.7645963407560668,0.7649577132891758,0.7619136805581697,0.7651528592213253,0.7652053185265435,0.7659312091898064,0.764741447682693,0.755547960320391,0.7663058385968532,0.7647932540926317,0.7639692357620271,0.7671452366978123,0.7666379064146859,0.763110113536857,0.7636258321230507,0.7673755978047707,0.7644029470864021,0.7636254863173815,0.7571083694539416,0.7648925214576265,0.7642747999438674,0.764235393291286,0.7653645057058902,0.7645775980653748,0.7661346942278211,0.7644178817718096,0.7671443782280277,0.7658398755524871,0.763358150475732,0.7601772714561161,0.7658611454820552,0.7636476264002252,0.7640013541879971,0.7655977694072376,0.7631114128811192,0.7632945537998499,0.7625281529491106,0.7634494482114775,0.7670263449584669,0.765890300027657,0.7634497487894949,0.7650038706759901,0.7672173316038002,0.7642603366239448,0.7657360664976924,0.7653270765466638,0.7646809745360399,0.7607187525860615,0.7673530361773339,0.7652266894488484,0.7642480591863676,0.7665554303834635,0.7587004949270943,0.762221933940128,0.7594526967088046,0.7652862422408154,0.7654249033522881,0.7658897367253232,0.7642912101062749,0.7582020667684665,0.766541528839298,0.7617294749511949,0.7663428113794172,0.7644670475573937,0.7647207915203049,0.7655274944960107,0.7635501801873079,0.7635426131780528,0.7619148049923062,0.7614736768936468,0.7640442372116896,0.7616578207890925,0.7645165657390458,0.761517526940694,0.766335282255385],"type":"scatter"},{"name":"Best Value","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99],"y":[0.7658177411639097,0.7658177411639097,0.7664929775729243,0.7664929775729243,0.7664929775729243,0.7664929775729243,0.7664929775729243,0.7664929775729243,0.7677922038766959,0.7677922038766959,0.7677922038766959,0.7677922038766959,0.7677922038766959,0.7677922038766959,0.7677922038766959,0.7677922038766959,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416,0.7681864494330416],"type":"scatter"}],                        {"title":{"text":"Optimization History Plot"},"xaxis":{"title":{"text":"Trial"}},"yaxis":{"title":{"text":"Objective Value"}},"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}}},                        {"responsive": true}                    ).then(function(){
+
+var gd = document.getElementById('f5d91f63-05ef-4189-8e38-c481be1b63da');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+</body>
+</html></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modelo com os melhores parâmetros</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_params</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;random_state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seed</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;class_weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">1.44</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="n">lgbm_optuna</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">()</span>
+<span class="n">lgbm_optuna</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+
+<span class="n">lgbm_optuna</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+LGBMClassifier(class_weight={0: 1.44, 1: 1}, colsample_bytree=0.4,
+               learning_rate=0.14, max_depth=11, min_child_weight=2,
+               n_estimators=171, random_state=10)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de confusão do modelo Random Forest otimizado</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">lgbm_optuna</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_94_0.png" src="_images/Colorretal_-_vivo_ano3_94_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.731     0.746     0.738      3148
+           1      0.761     0.747     0.754      3410
+
+    accuracy                          0.746      6558
+   macro avg      0.746     0.746     0.746      6558
+weighted avg      0.747     0.746     0.746      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>Há uma melhora de acurácia em relação ao primeiro modelo testado, de 74% para 75%.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC do modelo otimizado</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">lgbm_optuna</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_96_0.png" src="_images/Colorretal_-_vivo_ano3_96_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>A curva ROC mostra que o modelo possui um pouco de overfitting, pois para o conjunto de treino temos AUC = 0,923 e para o teste AUC = 0,826, essa diferença caracteriza o problema.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="Voting-Classifier">
+<h3><strong>Voting Classifier</strong><a class="headerlink" href="#Voting-Classifier" title="Permalink to this heading"></a></h3>
+<p>Usando os melhores modelos obtidos anteriormente, será criado um modelo de votação buscando obter um performance ainda melhor do que com os modelos sozinhos.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhores hiperparâmetros do modelo Random Forest</span>
+<span class="n">rf_score</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">optuna_score</span> <span class="o">=</span> <span class="n">rf_optuna</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy: RF = </span><span class="si">{</span><span class="n">rf_score</span><span class="si">}</span><span class="s1">, Optuna = </span><span class="si">{</span><span class="n">optuna_score</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Comparação entre o modelo inicial e o modelo otimizado</span>
+<span class="k">if</span> <span class="n">optuna_score</span> <span class="o">&gt;=</span> <span class="n">rf_score</span><span class="p">:</span>
+    <span class="n">params_rf</span> <span class="o">=</span> <span class="n">rf_optuna</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Otimizado venceu&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">params_rf</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Modelo inicial venceu&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Accuracy: RF = 0.7380298871607197, Optuna = 0.7436718511741385
+
+Otimizado venceu
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhores hiperparâmetros do modelo XGBoost</span>
+<span class="n">xgb_score</span> <span class="o">=</span> <span class="n">xgboost</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">optuna_score</span> <span class="o">=</span> <span class="n">xgb_optuna</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy: XGB = </span><span class="si">{</span><span class="n">xgb_score</span><span class="si">}</span><span class="s1">, Optuna = </span><span class="si">{</span><span class="n">optuna_score</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Comparação entre o modelo inicial e o modelo otimizado</span>
+<span class="k">if</span> <span class="n">optuna_score</span> <span class="o">&gt;=</span> <span class="n">xgb_score</span><span class="p">:</span>
+    <span class="n">params_xgb</span> <span class="o">=</span> <span class="n">xgb_optuna</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Otimizado venceu&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">params_xgb</span> <span class="o">=</span> <span class="n">xgboost</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Modelo inicial venceu&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Accuracy: XGB = 0.7480939310765478, Optuna = 0.7482464165904239
+
+Otimizado venceu
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhores hiperparâmetros do modelo LightGBM</span>
+<span class="n">lgbm_score</span> <span class="o">=</span> <span class="n">lgbm</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">optuna_score</span> <span class="o">=</span> <span class="n">lgbm_optuna</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy: LGBM = </span><span class="si">{</span><span class="n">lgbm_score</span><span class="si">}</span><span class="s1">, Optuna = </span><span class="si">{</span><span class="n">optuna_score</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Comparação entre o modelo inicial e o modelo otimizado</span>
+<span class="k">if</span> <span class="n">optuna_score</span> <span class="o">&gt;=</span> <span class="n">lgbm_score</span><span class="p">:</span>
+    <span class="n">params_lgbm</span> <span class="o">=</span> <span class="n">lgbm_optuna</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Otimizado venceu&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">params_lgbm</span> <span class="o">=</span> <span class="n">lgbm</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Modelo inicial venceu&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Accuracy: LGBM = 0.7453491918267765, Optuna = 0.7464165904239097
+
+Otimizado venceu
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação dos modelos com os hiperparâmetros de melhor desempenho</span>
+
+<span class="c1"># Random Forest</span>
+<span class="n">best_rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">best_rf</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params_rf</span><span class="p">)</span>
+
+<span class="c1"># XGBoost</span>
+<span class="n">best_xgb</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+<span class="n">best_xgb</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params_xgb</span><span class="p">)</span>
+
+<span class="c1"># LightGBM</span>
+<span class="n">best_lgbm</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">()</span>
+<span class="n">best_lgbm</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params_lgbm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+LGBMClassifier(class_weight={0: 1.44, 1: 1}, colsample_bytree=0.4,
+               learning_rate=0.14, max_depth=11, min_child_weight=2,
+               n_estimators=171, random_state=10)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">VotingClassifier</span>
+
+<span class="c1"># Criação e treinamento do modelo de votação</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">VotingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;RandomForest&#39;</span><span class="p">,</span> <span class="n">best_rf</span><span class="p">),</span>
+                                   <span class="p">(</span><span class="s1">&#39;XGBoost&#39;</span><span class="p">,</span> <span class="n">best_xgb</span><span class="p">),</span>
+                                   <span class="p">(</span><span class="s1">&#39;LightGBM&#39;</span><span class="p">,</span> <span class="n">best_lgbm</span><span class="p">)</span>
+                                   <span class="p">],</span>
+                       <span class="n">voting</span><span class="o">=</span><span class="s1">&#39;soft&#39;</span><span class="p">)</span>
+
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Matriz de confusão</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_104_0.png" src="_images/Colorretal_-_vivo_ano3_104_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+              precision    recall  f1-score   support
+
+           0      0.735     0.749     0.742      3148
+           1      0.764     0.751     0.758      3410
+
+    accuracy                          0.750      6558
+   macro avg      0.750     0.750     0.750      6558
+weighted avg      0.750     0.750     0.750      6558
+
+</pre></div></div>
+</div>
+<blockquote>
+<div><p>O modelo utilizando votação, com Random Forest, XGBoost e LightGBM, obteve resultados um pouco melhores em relação aos modelos sozinhos, com 75% de acurácia.</p>
+</div></blockquote>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curva ROC do melhor modelo de votação</span>
+<span class="n">plot_roc_curve</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Colorretal_-_vivo_ano3_106_0.png" src="_images/Colorretal_-_vivo_ano3_106_0.png" />
+</div>
+</div>
+<blockquote>
+<div><p>A curva ROC mostra que o modelo possui overfitting, pois para o conjunto de treino temos AUC = 0,921 e para o teste AUC = 0,828.</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Colorretal%20-%20vivo_ano1.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Colorretal%20-%20vivo_ano5.html" class="btn btn-neutral float-right" title="Introdução" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Lucas Buk Cardoso.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
