@@ -653,7 +653,6 @@ DRS          0
 dtype: int64
 </pre></div></div>
 </div>
-<p>Here we have the correlations between the label and the other columns, the columns with higher correlations will not be used as features of the models, because they may have been used to create the label, such as the <code class="docutils literal notranslate"><span class="pre">ULTINFO</span></code> column, or they can be used as label for other machine learning models.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -827,7 +826,7 @@ GaussianNB()
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_18_0.png" src="_images/Colorretal_-_obito_geral_18_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_17_0.png" src="_images/Colorretal_-_obito_geral_17_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -866,7 +865,7 @@ weighted avg      0.751     0.471     0.302      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_20_0.png" src="_images/Colorretal_-_obito_geral_20_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_19_0.png" src="_images/Colorretal_-_obito_geral_19_0.png" />
 </div>
 </div>
 <blockquote>
@@ -918,7 +917,7 @@ RandomForestClassifier(class_weight={0: 1.028, 1: 1}, criterion=&#39;entropy&#39
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_25_0.png" src="_images/Colorretal_-_obito_geral_25_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_24_0.png" src="_images/Colorretal_-_obito_geral_24_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -954,7 +953,7 @@ weighted avg      0.761     0.760     0.761      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_27_0.png" src="_images/Colorretal_-_obito_geral_27_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_26_0.png" src="_images/Colorretal_-_obito_geral_26_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -970,7 +969,7 @@ weighted avg      0.761     0.760     0.761      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_28_0.png" src="_images/Colorretal_-_obito_geral_28_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_27_0.png" src="_images/Colorretal_-_obito_geral_27_0.png" />
 </div>
 </div>
 <blockquote>
@@ -989,7 +988,7 @@ weighted avg      0.761     0.760     0.761      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_30_0.png" src="_images/Colorretal_-_obito_geral_30_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_29_0.png" src="_images/Colorretal_-_obito_geral_29_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1008,7 +1007,7 @@ weighted avg      0.761     0.760     0.761      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_32_0.png" src="_images/Colorretal_-_obito_geral_32_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_31_0.png" src="_images/Colorretal_-_obito_geral_31_0.png" />
 </div>
 </div>
 <p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante aqui também, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 1 (óbito por qualquer razão). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 0. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
@@ -1151,7 +1150,7 @@ RandomForestClassifier(class_weight={0: 1.11, 1: 1}, criterion=&#39;entropy&#39;
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_43_0.png" src="_images/Colorretal_-_obito_geral_43_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_42_0.png" src="_images/Colorretal_-_obito_geral_42_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1187,7 +1186,7 @@ weighted avg      0.773     0.772     0.772      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_45_0.png" src="_images/Colorretal_-_obito_geral_45_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_44_0.png" src="_images/Colorretal_-_obito_geral_44_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1238,7 +1237,7 @@ XGBClassifier(max_depth=5, random_state=10, scale_pos_weight=0.9325)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_50_0.png" src="_images/Colorretal_-_obito_geral_50_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_49_0.png" src="_images/Colorretal_-_obito_geral_49_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1274,7 +1273,7 @@ weighted avg      0.774     0.774     0.774      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_52_0.png" src="_images/Colorretal_-_obito_geral_52_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_51_0.png" src="_images/Colorretal_-_obito_geral_51_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1293,7 +1292,7 @@ weighted avg      0.774     0.774     0.774      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_54_0.png" src="_images/Colorretal_-_obito_geral_54_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_53_0.png" src="_images/Colorretal_-_obito_geral_53_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1312,7 +1311,7 @@ weighted avg      0.774     0.774     0.774      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_56_0.png" src="_images/Colorretal_-_obito_geral_56_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_55_0.png" src="_images/Colorretal_-_obito_geral_55_0.png" />
 </div>
 </div>
 <p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante também, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 1 (óbito por câncer). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 0. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
@@ -1454,7 +1453,7 @@ XGBClassifier(colsample_bytree=0.7, gamma=0.3, learning_rate=0.05, max_depth=6,
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_67_0.png" src="_images/Colorretal_-_obito_geral_67_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_66_0.png" src="_images/Colorretal_-_obito_geral_66_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1490,7 +1489,7 @@ weighted avg      0.778     0.777     0.777      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_69_0.png" src="_images/Colorretal_-_obito_geral_69_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_68_0.png" src="_images/Colorretal_-_obito_geral_68_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1541,7 +1540,7 @@ LGBMClassifier(class_weight={0: 1.071, 1: 1}, max_depth=5, random_state=10)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_74_0.png" src="_images/Colorretal_-_obito_geral_74_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_73_0.png" src="_images/Colorretal_-_obito_geral_73_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1577,7 +1576,7 @@ weighted avg      0.772     0.772     0.772      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_76_0.png" src="_images/Colorretal_-_obito_geral_76_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_75_0.png" src="_images/Colorretal_-_obito_geral_75_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1596,7 +1595,7 @@ weighted avg      0.772     0.772     0.772      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_78_0.png" src="_images/Colorretal_-_obito_geral_78_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_77_0.png" src="_images/Colorretal_-_obito_geral_77_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1626,7 +1625,7 @@ LightGBM binary classifier with TreeExplainer shap values output has changed to 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_80_1.png" src="_images/Colorretal_-_obito_geral_80_1.png" />
+<img alt="_images/Colorretal_-_obito_geral_79_1.png" src="_images/Colorretal_-_obito_geral_79_1.png" />
 </div>
 </div>
 <p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 1 (óbito por qualquer razão). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 0. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
@@ -1766,7 +1765,7 @@ LGBMClassifier(class_weight={0: 1.091, 1: 1}, colsample_bytree=0.7,
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_91_0.png" src="_images/Colorretal_-_obito_geral_91_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_90_0.png" src="_images/Colorretal_-_obito_geral_90_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1802,7 +1801,7 @@ weighted avg      0.781     0.781     0.781      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_93_0.png" src="_images/Colorretal_-_obito_geral_93_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_92_0.png" src="_images/Colorretal_-_obito_geral_92_0.png" />
 </div>
 </div>
 <blockquote>
@@ -1954,7 +1953,7 @@ LGBMClassifier(class_weight={0: 1.091, 1: 1}, colsample_bytree=0.7,
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_101_0.png" src="_images/Colorretal_-_obito_geral_101_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_100_0.png" src="_images/Colorretal_-_obito_geral_100_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1990,7 +1989,7 @@ weighted avg      0.781     0.780     0.780      7979
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_103_0.png" src="_images/Colorretal_-_obito_geral_103_0.png" />
+<img alt="_images/Colorretal_-_obito_geral_102_0.png" src="_images/Colorretal_-_obito_geral_102_0.png" />
 </div>
 </div>
 <blockquote>
