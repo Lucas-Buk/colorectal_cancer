@@ -1,27 +1,23 @@
-.. Cancer Project documentation master file, created by
-   sphinx-quickstart on Fri May  7 10:07:23 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Documentação do estudo com pacientes de câncer colorretal
 =========================================================
 
 Autores
 -------
 
-* Gisele Fernandes - Grupo de Epidemiologia e Estatística do Câncer, Centro Internacional de Pesquisa, A.C. Camargo Cancer Center
-* Lucas Buk Cardoso - Núcleo de Sistemas Eletrônicos Embarcados, Instituto Mauá de Tecnologia
-* Maria Paula Curado - Grupo de Epidemiologia e Estatística do Câncer, Centro Internacional de Pesquisa, A.C. Camargo Cancer Center
-* Stela Verzinhasse Peres - Diretora de Informação e Epidemiologia, Fundação Oncocentro de São Paulo
-* Tatiana Natasha Toporcov - Departamento de Epidemiologia, Faculdade de Saúde Pública, Universidade de São Paulo
-* Vanderlei Cunha Parro - Núcleo de Sistemas Eletrônicos Embarcados, Instituto Mauá de Tecnologia
+* Gisele Fernandes - A.C. Camargo Cancer Center
+* Lucas Buk Cardoso - Instituto Mauá de Tecnologia
+* Maria Paula Curado - A.C. Camargo Cancer Center
+* Stela Verzinhasse Peres - Fundação Oncocentro de São Paulo
+* Tatiana Natasha Toporcov - Faculdade de Saúde Pública da Universidade de São Paulo
+* Vanderlei Cunha Parro - Instituto Mauá de Tecnologia
+* Victor Wünsch Filho - Fundação Oncocentro de São Paulo e Faculdade de Saúde Pública da Universidade de São Paulo
 
 Introdução
 ------------
 
-A seguir está apresentada a documentação do estudo de pacientes com câncer colorretal desenvolvido pelo Intituto Mauá de Tecnologia, em parceria com a FOSP (Fundação Oncocentro de São Paulo), Faculdade de Saúde Pública da USP (Universidade de São Paulo) e A.C. Camargo Cancer Center.
+A seguir está apresentada a documentação do estudo de pacientes com câncer colorretal desenvolvido pelo Núcleo de Sistemas Eletrônicos Embarcados do Intituto Mauá de Tecnologia, em parceria com a FOSP (Fundação Oncocentro de São Paulo), Faculdade de Saúde Pública da USP (Universidade de São Paulo) e A.C. Camargo Cancer Center.
 
-O projeto visa a utilização de algoritmos de aprendizado de máquina para realizar previsões e identificar as variáveis mais importantes no óbito e na sobrevida de pacientes com câncer colorretal, residentes no estado de São Paulo. 
+O projeto visa a utilização de algoritmos de aprendizado de máquina para realizar previsões e identificar as variáveis mais importantes na sobrevida de pacientes com câncer colorretal, residentes no estado de São Paulo. 
 
 O conjunto de dados utilizado é aberto, chamado Registro Hospilar de Câncer (RHC), e está disponível no site da `FOSP <http://www.fosp.saude.sp.gov.br/fosp/diretoria-adjunta-de-informacao-e-epidemiologia/rhc-registro-hospitalar-de-cancer/banco-de-dados-do-rhc/>`_. Desses dados foram selecionados pacientes com câncer colorretal tratados entre 2000 e 2021.
 
@@ -53,7 +49,6 @@ A imagem abaixo mostra as seleções feitas no conjunto de dados, chegando no n�
     :align: center
     :height: 400px
     :alt: alternate text
-
 
 
 Os códigos completos estão disponíveis em `Github <https://github.com/Lucas-Buk/colorectal>`_.
