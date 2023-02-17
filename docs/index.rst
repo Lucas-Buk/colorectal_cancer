@@ -51,6 +51,7 @@ A imagem abaixo mostra as seleções feitas no conjunto de dados, chegando no n�
     :alt: alternate text
 
 
+|
 Os códigos completos estão disponíveis em `Github <https://github.com/Lucas-Buk/colorectal>`_.
 
 .. toctree::
