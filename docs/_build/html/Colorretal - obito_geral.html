@@ -434,7 +434,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-  <div id="df-423238ee-a46b-462d-9a1a-e481b92cbee9">
+  <div id="df-fd413e42-c5d4-4e13-9214-c3bd87a2487f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -554,7 +554,7 @@ div.rendered_html tbody tr:hover {
 </table>
 <p>3 rows × 37 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-423238ee-a46b-462d-9a1a-e481b92cbee9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fd413e42-c5d4-4e13-9214-c3bd87a2487f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -605,12 +605,12 @@ div.rendered_html tbody tr:hover {
 
       <script>
         const buttonEl =
-          document.querySelector('#df-423238ee-a46b-462d-9a1a-e481b92cbee9 button.colab-df-convert');
+          document.querySelector('#df-fd413e42-c5d4-4e13-9214-c3bd87a2487f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-423238ee-a46b-462d-9a1a-e481b92cbee9');
+          const element = document.querySelector('#df-fd413e42-c5d4-4e13-9214-c3bd87a2487f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -715,8 +715,8 @@ Name: obito_geral, dtype: int64
 <h1><strong>Análise - Óbito geral</strong><a class="headerlink" href="#Análise---Óbito-geral" title="Permalink to this heading"></a></h1>
 <section id="Pré-processamento">
 <h2><strong>Pré-processamento</strong><a class="headerlink" href="#Pré-processamento" title="Permalink to this heading"></a></h2>
-<p>Como o dataset já foi limpo anteriormente, aqui na etapa de pré-processamento será realizada a divisão dos dados em treino e teste, fazer a codificação das colunas textuais para colunas numéricas e a normalização dos dados. Com isso, temos os dados prontos para o treinamento dos modelos de machine learning e consequentemente sua validação.</p>
-<p>Primeiro serão definidas as colunas que não serão utilizadas como features, assim, foi escolhido manter a coluna <code class="docutils literal notranslate"><span class="pre">IDADE</span></code>, então a coluna <code class="docutils literal notranslate"><span class="pre">FAIXAETAR</span></code> será retirada. O mesmo ocorre com a coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code>, retirando a coluna <code class="docutils literal notranslate"><span class="pre">ECGRUP</span></code>. Por fim, as outras colunas contidas na <code class="docutils literal notranslate"><span class="pre">list_drop</span></code> são possíveis saídas para os modelos, mas estamos interessados somente no óbito geral, por isso só ela será mantida como label e as outras serão retiradas.</p>
+<p>Como o dataset já foi limpo anteriormente, aqui na etapa de pré-processamento serão realizadas a divisão dos dados em treino e teste, a codificação das colunas textuais para colunas numéricas e a normalização dos dados. Com isso, temos os dados prontos para o treinamento dos modelos de machine learning e consequentemente sua validação.</p>
+<p>Neste primeiro momento, serão definidas as colunas que não serão utilizadas como features, assim, foi escolhido manter a coluna <code class="docutils literal notranslate"><span class="pre">IDADE</span></code>, então a coluna <code class="docutils literal notranslate"><span class="pre">FAIXAETAR</span></code> será retirada. O mesmo ocorre com a coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code>, retirando a coluna <code class="docutils literal notranslate"><span class="pre">ECGRUP</span></code>. Por fim, as outras colunas contidas na <code class="docutils literal notranslate"><span class="pre">list_drop</span></code> são possíveis saídas para os modelos, mas estamos interessados somente no óbito geral, por isso só ela será mantida como label e as outras serão retiradas.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -1066,7 +1066,7 @@ weighted avg      0.761     0.760     0.761      7979
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor tentativa</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best trial is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyRF</span><span class="o">.</span><span class="n">best_trial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">studyRF</span><span class="o">.</span><span class="n">best_trial</span>
 </pre></div>
 </div>
 </div>
@@ -1075,19 +1075,15 @@ weighted avg      0.761     0.760     0.761      7979
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The best trial is:
-FrozenTrial(number=69, state=TrialState.COMPLETE, values=[0.7659635302997903], datetime_start=datetime.datetime(2023, 1, 19, 16, 26, 59, 238716), datetime_complete=datetime.datetime(2023, 1, 19, 16, 27, 50, 2714), params={&#39;n_estimators&#39;: 173, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 8, &#39;min_samples_leaf&#39;: 4, &#39;max_samples&#39;: 0.7999999999999999, &#39;criterion&#39;: &#39;entropy&#39;}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;min_samples_split&#39;: IntDistribution(high=10, log=False, low=2, step=1), &#39;min_samples_leaf&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;max_samples&#39;: FloatDistribution(high=1.0, log=False, low=0.7, step=0.1), &#39;criterion&#39;: CategoricalDistribution(choices=(&#39;gini&#39;, &#39;entropy&#39;))}, trial_id=69, value=None)
+FrozenTrial(number=69, state=TrialState.COMPLETE, values=[0.7659635302997903], datetime_start=datetime.datetime(2023, 2, 17, 17, 22, 7, 408688), datetime_complete=datetime.datetime(2023, 2, 17, 17, 22, 58, 320291), params={&#39;n_estimators&#39;: 173, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 8, &#39;min_samples_leaf&#39;: 4, &#39;max_samples&#39;: 0.7999999999999999, &#39;criterion&#39;: &#39;entropy&#39;}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;min_samples_split&#39;: IntDistribution(high=10, log=False, low=2, step=1), &#39;min_samples_leaf&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;max_samples&#39;: FloatDistribution(high=1.0, log=False, low=0.7, step=0.1), &#39;criterion&#39;: CategoricalDistribution(choices=(&#39;gini&#39;, &#39;entropy&#39;))}, trial_id=69, value=None)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor score</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best value is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyRF</span><span class="o">.</span><span class="n">best_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># Melhores parâmetros</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best parameters are: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyRF</span><span class="o">.</span><span class="n">best_params</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhores parâmetros</span>
+<span class="n">studyRF</span><span class="o">.</span><span class="n">best_params</span>
 </pre></div>
 </div>
 </div>
@@ -1096,17 +1092,19 @@ FrozenTrial(number=69, state=TrialState.COMPLETE, values=[0.7659635302997903], d
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The best value is:
-0.7659635302997903
-The best parameters are:
-{&#39;n_estimators&#39;: 173, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 8, &#39;min_samples_leaf&#39;: 4, &#39;max_samples&#39;: 0.7999999999999999, &#39;criterion&#39;: &#39;entropy&#39;}
+{&#39;n_estimators&#39;: 173,
+ &#39;max_depth&#39;: 17,
+ &#39;min_samples_split&#39;: 8,
+ &#39;min_samples_leaf&#39;: 4,
+ &#39;max_samples&#39;: 0.7999999999999999,
+ &#39;criterion&#39;: &#39;entropy&#39;}
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot_optimization_history(studyRF).show()</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">studyRF</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1370,7 +1368,7 @@ weighted avg      0.774     0.774     0.774      7979
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor tentativa</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best trial is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyXGB</span><span class="o">.</span><span class="n">best_trial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">studyXGB</span><span class="o">.</span><span class="n">best_trial</span>
 </pre></div>
 </div>
 </div>
@@ -1379,19 +1377,15 @@ weighted avg      0.774     0.774     0.774      7979
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The best trial is:
-FrozenTrial(number=44, state=TrialState.COMPLETE, values=[0.7683506986309815], datetime_start=datetime.datetime(2023, 1, 19, 17, 27, 50, 946784), datetime_complete=datetime.datetime(2023, 1, 19, 17, 28, 42, 893046), params={&#39;n_estimators&#39;: 186, &#39;max_depth&#39;: 6, &#39;learning_rate&#39;: 0.05, &#39;gamma&#39;: 0.3, &#39;min_child_weight&#39;: 7, &#39;colsample_bytree&#39;: 0.7}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;learning_rate&#39;: FloatDistribution(high=0.2, log=False, low=0.05, step=0.05), &#39;gamma&#39;: FloatDistribution(high=0.3, log=False, low=0.0, step=0.1), &#39;min_child_weight&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;colsample_bytree&#39;: FloatDistribution(high=0.7, log=False, low=0.3, step=0.1)}, trial_id=44, value=None)
+FrozenTrial(number=44, state=TrialState.COMPLETE, values=[0.7683506986309815], datetime_start=datetime.datetime(2023, 2, 17, 18, 24, 36, 684434), datetime_complete=datetime.datetime(2023, 2, 17, 18, 25, 32, 756466), params={&#39;n_estimators&#39;: 186, &#39;max_depth&#39;: 6, &#39;learning_rate&#39;: 0.05, &#39;gamma&#39;: 0.3, &#39;min_child_weight&#39;: 7, &#39;colsample_bytree&#39;: 0.7}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;learning_rate&#39;: FloatDistribution(high=0.2, log=False, low=0.05, step=0.05), &#39;gamma&#39;: FloatDistribution(high=0.3, log=False, low=0.0, step=0.1), &#39;min_child_weight&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;colsample_bytree&#39;: FloatDistribution(high=0.7, log=False, low=0.3, step=0.1)}, trial_id=44, value=None)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor score</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best value is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyXGB</span><span class="o">.</span><span class="n">best_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># Melhores parâmetros</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best parameters are: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyXGB</span><span class="o">.</span><span class="n">best_params</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhores parâmetros</span>
+<span class="n">studyXGB</span><span class="o">.</span><span class="n">best_params</span>
 </pre></div>
 </div>
 </div>
@@ -1400,17 +1394,19 @@ FrozenTrial(number=44, state=TrialState.COMPLETE, values=[0.7683506986309815], d
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The best value is:
-0.7683506986309815
-The best parameters are:
-{&#39;n_estimators&#39;: 186, &#39;max_depth&#39;: 6, &#39;learning_rate&#39;: 0.05, &#39;gamma&#39;: 0.3, &#39;min_child_weight&#39;: 7, &#39;colsample_bytree&#39;: 0.7}
+{&#39;n_estimators&#39;: 186,
+ &#39;max_depth&#39;: 6,
+ &#39;learning_rate&#39;: 0.05,
+ &#39;gamma&#39;: 0.3,
+ &#39;min_child_weight&#39;: 7,
+ &#39;colsample_bytree&#39;: 0.7}
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot_optimization_history(studyXGB).show()</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">studyXGB</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1610,22 +1606,11 @@ weighted avg      0.772     0.772     0.772      7979
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/usr/local/lib/python3.8/dist-packages/shap/explainers/_tree.py:353: UserWarning:
-
-LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
-
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/Colorretal_-_obito_geral_79_1.png" src="_images/Colorretal_-_obito_geral_79_1.png" />
+<img alt="_images/Colorretal_-_obito_geral_79_0.png" src="_images/Colorretal_-_obito_geral_79_0.png" />
 </div>
 </div>
 <p>A coluna <code class="docutils literal notranslate"><span class="pre">EC</span></code> foi a mais importante, com isso, os valores mais altos desta variável, mostrados em rosa, influenciaram mais o modelo na previsão da classe 1 (óbito por qualquer razão). Já os valores mais baixos desta coluna, em azul, tem mais peso para previsão ser da classe 0. Este comportamento faz sentido, pois quanto mais alto o estágio, maior é a extensão do câncer, assim menor a chance de sobrevivência.</p>
@@ -1682,7 +1667,7 @@ LightGBM binary classifier with TreeExplainer shap values output has changed to 
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor tentativa</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best trial is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_trial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_trial</span>
 </pre></div>
 </div>
 </div>
@@ -1691,19 +1676,15 @@ LightGBM binary classifier with TreeExplainer shap values output has changed to 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The best trial is:
-FrozenTrial(number=87, state=TrialState.COMPLETE, values=[0.7687013803247], datetime_start=datetime.datetime(2023, 1, 19, 18, 39, 6, 973886), datetime_complete=datetime.datetime(2023, 1, 19, 18, 39, 23, 692042), params={&#39;n_estimators&#39;: 247, &#39;max_depth&#39;: 14, &#39;learning_rate&#39;: 0.05, &#39;min_child_weight&#39;: 3, &#39;colsample_bytree&#39;: 0.7}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;learning_rate&#39;: FloatDistribution(high=0.2, log=False, low=0.05, step=0.01), &#39;min_child_weight&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;colsample_bytree&#39;: FloatDistribution(high=0.7, log=False, low=0.3, step=0.1)}, trial_id=87, value=None)
+FrozenTrial(number=87, state=TrialState.COMPLETE, values=[0.7687013803247], datetime_start=datetime.datetime(2023, 2, 17, 19, 37, 39, 335975), datetime_complete=datetime.datetime(2023, 2, 17, 19, 37, 51, 360355), params={&#39;n_estimators&#39;: 247, &#39;max_depth&#39;: 14, &#39;learning_rate&#39;: 0.05, &#39;min_child_weight&#39;: 3, &#39;colsample_bytree&#39;: 0.7}, user_attrs={}, system_attrs={}, intermediate_values={}, distributions={&#39;n_estimators&#39;: IntDistribution(high=250, log=False, low=50, step=1), &#39;max_depth&#39;: IntDistribution(high=18, log=False, low=3, step=1), &#39;learning_rate&#39;: FloatDistribution(high=0.2, log=False, low=0.05, step=0.01), &#39;min_child_weight&#39;: IntDistribution(high=7, log=False, low=1, step=1), &#39;colsample_bytree&#39;: FloatDistribution(high=0.7, log=False, low=0.3, step=0.1)}, trial_id=87, value=None)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhor score</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best value is: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># Melhores parâmetros</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The best parameters are: </span><span class="se">\n</span><span class="si">{</span><span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_params</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melhores parâmetros</span>
+<span class="n">studyLGBM</span><span class="o">.</span><span class="n">best_params</span>
 </pre></div>
 </div>
 </div>
@@ -1712,17 +1693,18 @@ FrozenTrial(number=87, state=TrialState.COMPLETE, values=[0.7687013803247], date
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The best value is:
-0.7687013803247
-The best parameters are:
-{&#39;n_estimators&#39;: 247, &#39;max_depth&#39;: 14, &#39;learning_rate&#39;: 0.05, &#39;min_child_weight&#39;: 3, &#39;colsample_bytree&#39;: 0.7}
+{&#39;n_estimators&#39;: 247,
+ &#39;max_depth&#39;: 14,
+ &#39;learning_rate&#39;: 0.05,
+ &#39;min_child_weight&#39;: 3,
+ &#39;colsample_bytree&#39;: 0.7}
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot_optimization_history(studyLGBM).show()</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">studyLGBM</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
