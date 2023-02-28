@@ -66,7 +66,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#Criação-de-novas-colunas"><strong>Criação de novas colunas</strong></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Colunas-das-diferenças-de-datas"><strong>Colunas das diferenças de datas</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Colunas-das-diferença-de-datas"><strong>Colunas das diferença de datas</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Criação-do-label-de-óbito"><strong>Criação do label de óbito</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Inputer-escolaridade"><strong>Inputer escolaridade</strong></a></li>
 </ul>
@@ -407,7 +407,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/ANALITICO_Colorretal_lucas.csv&#39;</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal.csv&#39;</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">drop_id</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -426,7 +426,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-  <div id="df-bf5da172-dd7e-4229-9764-bd7343b4ff91">
+  <div id="df-4d52c66b-64c4-4d74-8561-fb320d4689e3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -546,7 +546,7 @@ div.rendered_html tbody tr:hover {
 </table>
 <p>3 rows × 68 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bf5da172-dd7e-4229-9764-bd7343b4ff91')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4d52c66b-64c4-4d74-8561-fb320d4689e3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -597,12 +597,12 @@ div.rendered_html tbody tr:hover {
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bf5da172-dd7e-4229-9764-bd7343b4ff91 button.colab-df-convert');
+          document.querySelector('#df-4d52c66b-64c4-4d74-8561-fb320d4689e3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bf5da172-dd7e-4229-9764-bd7343b4ff91');
+          const element = document.querySelector('#df-4d52c66b-64c4-4d74-8561-fb320d4689e3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1695,7 +1695,9 @@ memory usage: 35.3+ MB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ULTINFO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 – Alive with cancer; 2 – Alive, without other specifications;</span>
+<span class="c1"># 3 – Death by cancer; 4 – Death by other causes, without other specifications</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;ULTINFO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2146,9 +2148,9 @@ dtype: float64
 <h2><strong>Análise das colunas</strong><a class="headerlink" href="#Análise-das-colunas" title="Permalink to this heading"></a></h2>
 <p>Nesta seção, as colunas serão analisadas individualmente, após isso, uma função será criada para realizar a limpeza e seleção dos dados.</p>
 <p>As colunas foram divididas de acordo com seus tipos.</p>
-<p>Como mostrado na <a class="reference external" href="https://colorectal.readthedocs.io/en/latest/index.html#sumario">página inicial</a>, foram feitas algumas seleções nas de grupo de estadiamento clínico, morfologia e comportamento, além da retirada de várias colunas que não serão utilizadas.</p>
+<p>Como mostrado na página inicial (<a class="reference external" href="https://">texto do link</a>), foram feitas algumas seleções nas de grupo de estadiamento clínico, morfologia e comportamento, além da retirada de várias colunas que não serão utilizadas.</p>
 <blockquote>
-<div><p>Verifique a <a class="reference external" href="https://colorectal.readthedocs.io/en/latest/Fun%C3%A7%C3%B5es.html#Fun%C3%A7%C3%B5es">seção das funções</a> para ver a função completa.</p>
+<div><p>Verifique a <a class="reference external" href="https://cancer-project.readthedocs.io/en/latest/Cancer%20Libraries%20and%20functions.html#Models">seção das funções</a> para ver a função completa.</p>
 </div></blockquote>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -2164,6 +2166,33 @@ dtype: float64
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 (68013, 68)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_aux</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Index([&#39;ESCOLARI&#39;, &#39;IDADE&#39;, &#39;SEXO&#39;, &#39;UFNASC&#39;, &#39;UFRESID&#39;, &#39;IBGE&#39;, &#39;CIDADE&#39;,
+       &#39;CATEATEND&#39;, &#39;DTCONSULT&#39;, &#39;DIAGPREV&#39;, &#39;DTDIAG&#39;, &#39;TOPO&#39;, &#39;TOPOGRUP&#39;,
+       &#39;DESCTOPO&#39;, &#39;MORFO&#39;, &#39;comportamento&#39;, &#39;DESCMORFO&#39;, &#39;EC&#39;, &#39;ECGRUP&#39;, &#39;T&#39;,
+       &#39;N&#39;, &#39;M&#39;, &#39;META01&#39;, &#39;META02&#39;, &#39;META03&#39;, &#39;META04&#39;, &#39;DTTRAT&#39;, &#39;NAOTRAT&#39;,
+       &#39;TRATAMENTO&#39;, &#39;TRATHOSP&#39;, &#39;TRATFAPOS&#39;, &#39;NENHUM&#39;, &#39;CIRURGIA&#39;, &#39;RADIO&#39;,
+       &#39;QUIMIO&#39;, &#39;HORMONIO&#39;, &#39;TMO&#39;, &#39;IMUNO&#39;, &#39;OUTROS&#39;, &#39;NENHUMANT&#39;,
+       &#39;NENHUMAPOS&#39;, &#39;CIRURAPOS&#39;, &#39;RADIOAPOS&#39;, &#39;QUIMIOAPOS&#39;, &#39;HORMOAPOS&#39;,
+       &#39;TMOAPOS&#39;, &#39;IMUNOAPOS&#39;, &#39;OUTROAPOS&#39;, &#39;DTULTINFO&#39;, &#39;ULTINFO&#39;, &#39;CONSDIAG&#39;,
+       &#39;TRATCONS&#39;, &#39;DIAGTRAT&#39;, &#39;ANODIAG&#39;, &#39;FAIXAETAR&#39;, &#39;DRS&#39;, &#39;RRAS&#39;,
+       &#39;DTRECIDIVA&#39;, &#39;RECNENHUM&#39;, &#39;RECLOCAL&#39;, &#39;RECREGIO&#39;, &#39;RECDIST&#39;, &#39;REC01&#39;,
+       &#39;REC02&#39;, &#39;REC03&#39;, &#39;REC04&#39;, &#39;IBGEATEN&#39;, &#39;HABILIT&#39;],
+      dtype=&#39;object&#39;)
 </pre></div></div>
 </div>
 <section id="Datas">
@@ -3978,7 +4007,7 @@ Index([&#39;ESCOLARI&#39;, &#39;IDADE&#39;, &#39;SEXO&#39;, &#39;IBGE&#39;, &#39
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">save_csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_first_pp.csv&#39;</span><span class="p">)</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">save_csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_pp.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4000,7 +4029,7 @@ CSV file saved successfully!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_first_pp.csv&#39;</span><span class="p">)</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_pp.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4422,13 +4451,13 @@ dtype: int64
     </div>
   </div></div>
 </div>
-<section id="Colunas-das-diferenças-de-datas">
-<h2><strong>Colunas das diferenças de datas</strong><a class="headerlink" href="#Colunas-das-diferenças-de-datas" title="Permalink to this heading"></a></h2>
+<section id="Colunas-das-diferença-de-datas">
+<h2><strong>Colunas das diferença de datas</strong><a class="headerlink" href="#Colunas-das-diferença-de-datas" title="Permalink to this heading"></a></h2>
 <p>Serão calculadas as diferenças entre as datas de consulta, diagnóstico e tratamento e, a seguir, a diferença entre a data da última informação e as três primeiras.</p>
 <p>Este processo será realizado pela função <code class="docutils literal notranslate"><span class="pre">get_dates_diff</span></code>, que descarta as linhas vazias das colunas <code class="docutils literal notranslate"><span class="pre">DTTRAT</span></code> e <code class="docutils literal notranslate"><span class="pre">DTULTINFO</span></code>, converte as colunas de data para o formato <em>datetime</em> e então calcula a diferença entre as datas em dias.</p>
 <p>A ideia está apresentada abaixo.</p>
 <blockquote>
-<div><p>Veja a função completa na <a class="reference external" href="https://colorectal.readthedocs.io/en/latest/Fun%C3%A7%C3%B5es.html#Fun%C3%A7%C3%B5es">seção de funções</a>.</p>
+<div><p>Veja a função completa na <a class="reference external" href="https://cancer-project.readthedocs.io/en/latest/Cancer%20Libraries%20and%20functions.html#General">seção de funções</a>.</p>
 </div></blockquote>
 <p><strong>Colunas de datas</strong></p>
 <ul class="simple">
@@ -4832,7 +4861,7 @@ dtype: int64
 <p>Nesta seção, rótulos serão criados com base nas informações mais recentes, uma coluna apenas se a pessoa morreu ou não (<code class="docutils literal notranslate"><span class="pre">obito_geral</span></code>) e outra para morte por câncer (<code class="docutils literal notranslate"><span class="pre">obito_cancer</span></code>).</p>
 <p>Outras três colunas terão a informação de quantos anos após o diagnóstico a pessoa viveu (<code class="docutils literal notranslate"><span class="pre">vivo_ano1</span></code>, <code class="docutils literal notranslate"><span class="pre">vivo_ano3</span></code>, <code class="docutils literal notranslate"><span class="pre">vivo_ano5</span></code>).</p>
 <blockquote>
-<div><p>Este processo vai ser feito pela função <code class="docutils literal notranslate"><span class="pre">get_labels</span></code>, disponível na <a class="reference external" href="https://colorectal.readthedocs.io/en/latest/Fun%C3%A7%C3%B5es.html#Fun%C3%A7%C3%B5es">seção das funções</a>.</p>
+<div><p>Este processo vai ser feito pela função <code class="docutils literal notranslate"><span class="pre">get_labels</span></code>, disponível na <a class="reference external" href="https://cancer-project.readthedocs.io/en/latest/Cancer%20Libraries%20and%20functions.html#General">seção das funções</a>.</p>
 </div></blockquote>
 <p><strong>Labels de óbito</strong></p>
 <ul>
@@ -5783,7 +5812,7 @@ Name: ESCOLARI, dtype: int64
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">save_csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_sp_labels.csv&#39;</span><span class="p">)</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">save_csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;/content/drive/MyDrive/Trabalho/Cancer/Datasets/colorretal_labels.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
