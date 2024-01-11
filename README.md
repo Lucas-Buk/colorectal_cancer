@@ -21,3 +21,7 @@ O conjunto de dados utilizado é aberto, chamado Registro Hospilar de Câncer (R
 * Vanderlei Cunha Parro - Instituto Mauá de Tecnologia
 
 * Victor Wünsch Filho - Fundação Oncocentro de São Paulo e Faculdade de Saúde Pública da Universidade de São Paulo
+
+## **Artigo**
+
+O artigo oriundo deste estudo foi publicado na **Scientific Reports** da *Nature*, podendo ser lido na íntegra [aqui](https://www.nature.com/articles/s41598-023-35649-9).
