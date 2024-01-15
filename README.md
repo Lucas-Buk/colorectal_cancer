@@ -2,7 +2,7 @@
 
 ## **Introdução**
 
-O presente estudo foi desenvolvido pelo Núcleo de Sistemas Eletrônicos Embarcados do Intituto Mauá de Tecnologia, em parceria com a FOSP (Fundação Oncocentro de São Paulo), Faculdade de Saúde Pública da USP (Universidade de São Paulo) e A.C. Camargo Cancer Center. O objetivo foi estudar a utilização de algoritmos de aprendizado de máquina na predição da sobrevida de pacientes com câncer colorretal, além de identificar as variáveis mais impactantes na predição.
+O presente estudo foi desenvolvido pelo Núcleo de Sistemas Eletrônicos Embarcados do Instituto Mauá de Tecnologia, em parceria com a FOSP (Fundação Oncocentro de São Paulo), Faculdade de Saúde Pública da USP (Universidade de São Paulo) e A.C. Camargo Cancer Center. O objetivo foi estudar a utilização de algoritmos de aprendizado de máquina na predição da sobrevida de pacientes com câncer colorretal, além de identificar as variáveis mais impactantes na predição.
 
 O conjunto de dados utilizado é aberto, chamado Registro Hospilar de Câncer (RHC-SP), e está disponível no site da [FOSP](https://fosp.saude.sp.gov.br/fosp/diretoria-adjunta-de-informacao-e-epidemiologia/rhc-registro-hospitalar-de-cancer/banco-de-dados-do-rhc/) . Desses dados foram selecionados pacientes com câncer colorretal tratados entre 2000 e 2021.
 
