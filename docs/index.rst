@@ -15,7 +15,7 @@ Autores
 Introdução
 -----------
 
-A seguir está apresentada a documentação do estudo de pacientes com câncer colorretal desenvolvido pelo Núcleo de Sistemas Eletrônicos Embarcados do Intituto Mauá de Tecnologia, em parceria com a FOSP (Fundação Oncocentro de São Paulo), Faculdade de Saúde Pública da USP (Universidade de São Paulo) e A.C. Camargo Cancer Center.
+A seguir está apresentada a documentação do estudo de pacientes com câncer colorretal desenvolvido pelo Núcleo de Sistemas Eletrônicos Embarcados do Instituto Mauá de Tecnologia, em parceria com a FOSP (Fundação Oncocentro de São Paulo), Faculdade de Saúde Pública da USP (Universidade de São Paulo) e A.C. Camargo Cancer Center.
 
 O projeto visa a utilização de algoritmos de aprendizado de máquina para realizar previsões e identificar as variáveis mais importantes na sobrevida de pacientes com câncer colorretal, residentes no estado de São Paulo. 
 
