@@ -1,0 +1,16 @@
+nbsphinx
+Sphinx
+pandas
+matplotlib
+scikit-learn
+imblearn
+numpy
+seaborn
+plotly
+xgboost
+lightgbm
+ipython
+ipykernel
+shap
+optuna
+sphinx_rtd_theme

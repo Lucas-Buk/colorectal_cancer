@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importações &mdash; Documentação do estudo de câncer colorretal</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Leitura dos Dados" href="Colorretal%20-%20preprocessing.html" />
+    <link rel="prev" title="Documentação - Estudo Colorretal" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Estudo Câncer Colorretal
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Bibliotecas e Funções</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Importações</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Funções"><strong>Funções</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Análise dos dados</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html"><strong>Leitura dos Dados</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html#Análise-dos-dados"><strong>Análise dos dados</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20preprocessing.html#Criação-de-novas-colunas"><strong>Criação de novas colunas</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Óbito geral</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_geral.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_geral.html#Análise---Óbito-geral"><strong>Análise - Óbito geral</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Óbito por câncer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_cancer.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20obito_cancer.html#Análise---Óbito-por-câncer"><strong>Análise - Óbito por câncer</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sobrevida um ano</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano1.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano1.html#Análise---Sobrevida-um-ano"><strong>Análise - Sobrevida um ano</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sobrevida três anos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano3.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano3.html#Análise---Sobrevida-três-anos"><strong>Análise - Sobrevida três anos</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Sobrevida cinco anos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano5.html"><strong>Introdução</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colorretal%20-%20vivo_ano5.html#Análise---Sobrevida-cinco-anos"><strong>Análise - Sobrevida cinco anos</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Estudo Câncer Colorretal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Importações</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Funções.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Importações">
+<h1><strong>Importações</strong><a class="headerlink" href="#Importações" title="Permalink to this heading"></a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install shap</span>
+<span class="c1"># !pip install optuna</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># semente para o random_state</span>
+
+<span class="c1"># Básicas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Modelos</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">lightgbm</span> <span class="kn">import</span> <span class="n">LGBMClassifier</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">StratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+
+<span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">optuna.samplers</span> <span class="kn">import</span> <span class="n">RandomSampler</span>
+<span class="kn">from</span> <span class="nn">optuna.visualization</span> <span class="kn">import</span> <span class="n">plot_optimization_history</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+C:\Users\lucas\anaconda3\envs\colorectalEnv\lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+</pre></div></div>
+</div>
+</section>
+<section id="Funções">
+<h1><strong>Funções</strong><a class="headerlink" href="#Funções" title="Permalink to this heading"></a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Graphs</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Preprocessing</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">MaxAbsScaler</span><span class="p">,</span> <span class="n">QuantileTransformer</span><span class="p">,</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Metrics</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span><span class="p">,</span> <span class="n">roc_auc_score</span><span class="p">,</span> <span class="n">auc</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">,</span> <span class="n">classification_report</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+
+<span class="c1"># SHAP values</span>
+<span class="kn">import</span> <span class="nn">shap</span>
+
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">drop_id</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;&quot;Read csv files</span>
+
+<span class="sd">    :param path str: path to the csv file.</span>
+
+<span class="sd">    :return: dataframe from the csv file.</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span>
+                    <span class="c1">#    dtype={&#39;M&#39;: str}</span>
+                    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">drop_id</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID_estudo&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">save_csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Save csv files</span>
+
+<span class="sd">    :param df pd.DataFrame: dataframe to be saved.</span>
+<span class="sd">    :param path str: path to save the csv file.</span>
+
+<span class="sd">    :return: no value</span>
+<span class="sd">    :rtype: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CSV file saved successfully!&#39;</span><span class="p">)</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">variables_preprocessing</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Do some preprocessing on the DataFrame like strings splits, fill NaN values,</span>
+<span class="sd">       replace values and drop some columns.</span>
+
+<span class="sd">    :param df pd.DataFrame: DataFrame to be preprocessed.</span>
+
+<span class="sd">    :return: DataFrame after be preprocessed and get some columns removed</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">no_info</span> <span class="o">=</span> <span class="s1">&#39;**Sem informação**&#39;</span>
+
+    <span class="c1"># Excluding ECGRUP with X and Y values</span>
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="o">~</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ECGRUP</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="s1">&#39;Y&#39;</span><span class="p">])]</span>
+
+    <span class="c1"># Get &#39;comportamento&#39; = 3</span>
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">comportamento</span> <span class="o">==</span> <span class="mi">3</span><span class="p">]</span>
+
+    <span class="c1"># Select only morphologies 81403</span>
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">MORFO</span> <span class="o">==</span> <span class="mi">81403</span><span class="p">]</span>
+
+    <span class="c1"># DRS</span>
+    <span class="n">DRS_expand</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DRS</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;DRS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DRS_expand</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">DRS</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># META</span>
+    <span class="c1"># df_aux.META01.fillna(no_info, inplace=True)</span>
+    <span class="c1"># df_aux.META02.fillna(no_info, inplace=True)</span>
+    <span class="c1"># df_aux.META03.fillna(no_info, inplace=True)</span>
+    <span class="c1"># df_aux.META04.fillna(no_info, inplace=True)</span>
+
+    <span class="c1"># REC</span>
+    <span class="c1"># df_aux.REC01.fillna(no_info, inplace=True)</span>
+    <span class="c1"># df_aux.REC02.fillna(no_info, inplace=True)</span>
+    <span class="c1"># df_aux.REC03.fillna(no_info, inplace=True)</span>
+
+    <span class="n">df_sp</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">UFRESID</span> <span class="o">==</span> <span class="s1">&#39;SP&#39;</span><span class="p">]</span>
+
+    <span class="n">col</span> <span class="o">=</span> <span class="n">df_sp</span><span class="o">.</span><span class="n">columns</span>
+    <span class="n">drop_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;UFRESID&#39;</span><span class="p">,</span> <span class="s1">&#39;UFNASC&#39;</span><span class="p">,</span> <span class="s1">&#39;REC04&#39;</span><span class="p">,</span> <span class="s1">&#39;CIDADE&#39;</span><span class="p">,</span> <span class="s1">&#39;DESCTOPO&#39;</span><span class="p">,</span> <span class="s1">&#39;DESCMORFO&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;META01&#39;</span><span class="p">,</span> <span class="s1">&#39;META02&#39;</span><span class="p">,</span> <span class="s1">&#39;META03&#39;</span><span class="p">,</span> <span class="s1">&#39;META04&#39;</span><span class="p">,</span> <span class="s1">&#39;REC01&#39;</span><span class="p">,</span> <span class="s1">&#39;REC02&#39;</span><span class="p">,</span> <span class="s1">&#39;REC03&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;comportamento&#39;</span><span class="p">,</span> <span class="s1">&#39;MORFO&#39;</span><span class="p">,</span> <span class="s1">&#39;TMOAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;TOPO&#39;</span><span class="p">,</span> <span class="s1">&#39;TOPOGRUP&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;NAOTRAT&#39;</span><span class="p">,</span> <span class="s1">&#39;TRATAMENTO&#39;</span><span class="p">,</span> <span class="s1">&#39;TRATFAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;NENHUMAPOS&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;CIRURAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;RADIOAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;QUIMIOAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;HORMOAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;IMUNOAPOS&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;OUTROAPOS&#39;</span><span class="p">,</span> <span class="s1">&#39;RECLOCAL&#39;</span><span class="p">,</span> <span class="s1">&#39;RECREGIO&#39;</span><span class="p">,</span> <span class="s1">&#39;RECDIST&#39;</span><span class="p">,</span> <span class="s1">&#39;HABILIT&#39;</span><span class="p">]</span>
+
+    <span class="n">col</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_cols</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df_sp</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">get_dates_diff</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dates_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the difference, in days, between columns with dates</span>
+
+<span class="sd">    :param df pd.DataFrame: DataFrame to get the dates difference.</span>
+<span class="sd">    :param dates_list list: list with the name of date columns.</span>
+
+<span class="sd">    :return: DataFrame with dates difference in nine new columns</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DTTRAT&#39;</span><span class="p">,</span> <span class="s1">&#39;DTULTINFO&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">dates_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;DTTRAT&#39;</span><span class="p">,</span> <span class="s1">&#39;DTULTINFO&#39;</span><span class="p">,</span> <span class="s1">&#39;DTRECIDIVA&#39;</span><span class="p">]:</span> <span class="c1"># Has a different date format</span>
+            <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span>
+        <span class="n">df_aux</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_aux</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="n">fmt</span><span class="p">)</span>
+
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;CONSDIAG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">DTDIAG</span> <span class="o">-</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DTCONSULT</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;DIAGTRAT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">DTTRAT</span> <span class="o">-</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DTDIAG</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;TRATCONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">DTTRAT</span> <span class="o">-</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DTCONSULT</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+
+    <span class="c1"># df_aux[&#39;RECCONS&#39;] = (df_aux.DTRECIDIVA - df_aux.DTCONSULT).dt.days</span>
+    <span class="c1"># df_aux[&#39;RECDIAG&#39;] = (df_aux.DTRECIDIVA - df_aux.DTDIAG).dt.days</span>
+    <span class="c1"># df_aux[&#39;RECTRAT&#39;] = (df_aux.DTRECIDIVA - df_aux.DTTRAT).dt.days</span>
+
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;ULTICONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">DTULTINFO</span> <span class="o">-</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DTCONSULT</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;ULTIDIAG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">DTULTINFO</span> <span class="o">-</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DTDIAG</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;ULTITRAT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">DTULTINFO</span> <span class="o">-</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">DTTRAT</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DTCONSULT&#39;</span><span class="p">,</span> <span class="s1">&#39;DTDIAG&#39;</span><span class="p">,</span> <span class="s1">&#39;DTTRAT&#39;</span><span class="p">,</span> <span class="s1">&#39;DTRECIDIVA&#39;</span><span class="p">,</span> <span class="s1">&#39;DTULTINFO&#39;</span><span class="p">],</span>
+                <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df_aux</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">get_labels</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create death labels acording to the last information year.</span>
+
+<span class="sd">    :param df pd.DataFrame: dataframe to be processed.</span>
+
+<span class="sd">    :return: DataFrame with the new labels</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;obito_geral&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;obito_cancer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;vivo_ano1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;vivo_ano3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;vivo_ano5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ULTINFO</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;obito_geral&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ULTINFO</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;obito_cancer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ULTIDIAG</span> <span class="o">&gt;</span> <span class="mi">365</span><span class="p">,</span> <span class="s1">&#39;vivo_ano1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ULTIDIAG</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="o">*</span><span class="mi">365</span><span class="p">,</span> <span class="s1">&#39;vivo_ano3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ULTIDIAG</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="o">*</span><span class="mi">365</span><span class="p">,</span> <span class="s1">&#39;vivo_ano5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">df_aux</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">get_label_rec</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create the labels analyzing whether there was recurrence.</span>
+
+<span class="sd">    :param df pd.DataFrame: dataframe to be processed.</span>
+
+<span class="sd">    :return: DataFrame with the new labels</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;ob_com_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;ob_sem_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;vivo_com_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;vivo_sem_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">obito_geral</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">RECNENHUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;ob_sem_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">obito_geral</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">RECNENHUM</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;ob_com_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">obito_geral</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">RECNENHUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;vivo_sem_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">obito_geral</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">RECNENHUM</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;vivo_com_rec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">df_aux</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">get_train_test</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">drop_cols</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get features and label, and then returns train and test dataframes.</span>
+
+<span class="sd">    :param df pd.DataFrame: dataframe that will be splitted.</span>
+<span class="sd">    :param drop_cols list: columns to be removed from the DataFrame.</span>
+<span class="sd">    :param label str: name of the label column.</span>
+<span class="sd">    :param test_size float: size of test (default=0.25).</span>
+<span class="sd">    :param random_state int: value for train_test_split random_state (default=10).</span>
+
+<span class="sd">    :return: train and test DataFrames, X_train, X_test, y_train, y_test</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">cols</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_cols</span><span class="p">)</span>
+    <span class="n">lb</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="n">label</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="n">cols</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="n">feat</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">feat</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span>
+                                                        <span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">,</span>
+                                                        <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">,</span>
+                                                        <span class="n">stratify</span><span class="o">=</span><span class="n">lb</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">train_preprocessing</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">encoder_type</span><span class="o">=</span><span class="s1">&#39;LabelEncoder&#39;</span><span class="p">,</span> <span class="n">normalizer</span><span class="o">=</span><span class="s1">&#39;StandardScaler&#39;</span><span class="p">,</span>
+                        <span class="n">pca</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pca_components</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preprocessing the train dataset.</span>
+
+<span class="sd">    :param df pd.DataFrame: DataFrame to be preprocessed.</span>
+<span class="sd">    :param encoder_type string: Encoder type to use for categorical features (default=&#39;LabelEncoder&#39;).</span>
+<span class="sd">        options:</span>
+<span class="sd">        * &#39;LabelEncoder&#39;</span>
+<span class="sd">        * &#39;OneHotEncoder&#39;</span>
+<span class="sd">    :param normalizer str: which normalizer to be fitted to the data (default=&#39;StandardScaler&#39;).</span>
+<span class="sd">        options:</span>
+<span class="sd">        * &#39;StandardScaler&#39;</span>
+<span class="sd">        * &#39;MinMaxScaler&#39;</span>
+<span class="sd">        * &#39;MaxAbsScaler&#39;</span>
+<span class="sd">        * &#39;QuantileTransformer&#39;</span>
+<span class="sd">    :param pca bool: if want to use PCA components set True (default=False).</span>
+<span class="sd">    :param pca_components int: number of PCA components (default=None).</span>
+<span class="sd">    :param random_state int: value for pca random_state (default=10).</span>
+
+<span class="sd">    :return df: preprocessed train DataFrame</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    :return enc: trained LabelEncoder</span>
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :return norm: trained normalizer</span>
+<span class="sd">    :rtype: object</span>
+<span class="sd">    :return pca if param pca=True: trained PCA</span>
+<span class="sd">    :rtype: object</span>
+<span class="sd">    :return feat_cols: list with features names</span>
+<span class="sd">    :rtype: list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">list_categorical</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+
+    <span class="n">enc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">encoder_type</span> <span class="o">==</span> <span class="s1">&#39;LabelEncoder&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">list_categorical</span><span class="p">:</span>
+            <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+            <span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+
+    <span class="k">elif</span> <span class="n">encoder_type</span> <span class="o">==</span> <span class="s1">&#39;OneHotEncoder&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">list_categorical</span><span class="p">:</span>
+            <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+            <span class="n">ohe_results</span> <span class="o">=</span> <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">[[</span><span class="n">col</span><span class="p">]])</span>
+            <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ohe_results</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">index</span><span class="o">=</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">df_aux</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">list_categorical</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">feat_cols</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">columns</span>
+
+    <span class="k">if</span> <span class="n">normalizer</span> <span class="o">==</span> <span class="s1">&#39;StandardScaler&#39;</span><span class="p">:</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">normalizer</span> <span class="o">==</span> <span class="s1">&#39;MinMaxScaler&#39;</span><span class="p">:</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">normalizer</span> <span class="o">==</span> <span class="s1">&#39;MaxAbsScaler&#39;</span><span class="p">:</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">MaxAbsScaler</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">normalizer</span> <span class="o">==</span> <span class="s1">&#39;QuantileTransformer&#39;</span><span class="p">:</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">QuantileTransformer</span><span class="p">(</span><span class="n">output_distribution</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">pca</span><span class="p">:</span>
+        <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">pca_components</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+        <span class="n">df_aux</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">df_aux</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">pca</span><span class="p">,</span> <span class="n">feat_cols</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">df_aux</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">feat_cols</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">test_preprocessing</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">encoder_type</span><span class="o">=</span><span class="s1">&#39;LabelEncoder&#39;</span><span class="p">,</span> <span class="n">pca</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preprocessing the test dataset.</span>
+
+<span class="sd">    :param df pd.DataFrame: DataFrame to be preprocessed.</span>
+<span class="sd">    :param enc: trained encoder with the categorical features.</span>
+<span class="sd">    :param norm: trained normalizer.</span>
+<span class="sd">    :param encoder_type string: Encoder type to use for categorical features (default=&#39;LabelEncoder&#39;).</span>
+<span class="sd">        options:</span>
+<span class="sd">        * &#39;LabelEncoder&#39;</span>
+<span class="sd">        * &#39;OneHotEncoder&#39;</span>
+<span class="sd">    :param pca: trained PCA (default=None).</span>
+
+<span class="sd">    :return: preprocessed test DataFrame</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df_aux</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">list_categorical</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+
+    <span class="k">if</span> <span class="n">encoder_type</span> <span class="o">==</span> <span class="s1">&#39;LabelEncoder&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">list_categorical</span><span class="p">:</span>
+            <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">classes_</span><span class="p">),</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">df_aux</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">classes_</span><span class="p">),</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">classes_</span><span class="p">)])</span>
+
+    <span class="k">elif</span> <span class="n">encoder_type</span> <span class="o">==</span> <span class="s1">&#39;OneHotEncoder&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">list_categorical</span><span class="p">:</span>
+            <span class="n">ohe_results</span> <span class="o">=</span> <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">[[</span><span class="n">col</span><span class="p">]])</span>
+            <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ohe_results</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">enc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">index</span><span class="o">=</span><span class="n">df_aux</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">df_aux</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">list_categorical</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">pca</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df_aux</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_aux</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df_aux</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">preprocessing</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">cols_drop</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">encoder_type</span><span class="o">=</span><span class="s1">&#39;LabelEncoder&#39;</span><span class="p">,</span>
+                  <span class="n">norm_name</span><span class="o">=</span><span class="s1">&#39;StandardScaler&#39;</span><span class="p">,</span> <span class="n">return_enc_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pca</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">pca_components</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">balance_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">group_years</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">first_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">morpho3</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preprocessing the train and test datasets.</span>
+
+<span class="sd">    :param df pd.DataFrame: DataFrame to be preprocessed.</span>
+<span class="sd">    :param cols_drop list: list of columns to be dropped from dataset.</span>
+<span class="sd">    :param label string: name of the column that will be the label.</span>
+<span class="sd">    :param test_size float: size of test set (default=0.25).</span>
+<span class="sd">    :param encoder_type string: Encoder type to use for categorical features (default=&#39;LabelEncoder&#39;).</span>
+<span class="sd">        options:</span>
+<span class="sd">        * &#39;LabelEncoder&#39;</span>
+<span class="sd">        * &#39;OneHotEncoder&#39;</span>
+<span class="sd">    :param norm_name str: which normalizer to be fitted to the data (default=&#39;StandardScaler&#39;).</span>
+<span class="sd">        - options:</span>
+<span class="sd">        * &#39;StandardScaler&#39;;</span>
+<span class="sd">        * &#39;MinMaxScaler&#39;;</span>
+<span class="sd">        * &#39;MaxAbsScaler&#39;;</span>
+<span class="sd">        * &#39;PowerTransformer&#39;;</span>
+<span class="sd">        * &#39;QuantileTransformer&#39;.</span>
+<span class="sd">    :param return_enc_norm bool: if want to return the encoder and the normalizer set True (default=False).</span>
+<span class="sd">    :param pca bool: if want to use PCA components set True (default=False).</span>
+<span class="sd">    :param pca_components int: number of PCA components (default=None).</span>
+<span class="sd">    :param balance_data bool: balance the data using oversampling (default=True).</span>
+<span class="sd">    :param group_years bool: create a subset with years grouped (default=False).</span>
+<span class="sd">    :param first_year int: first year of the grouped years. Ignored if group_years = False.</span>
+<span class="sd">    :param last_year int: last year of the grouped years. Ignored if group_years = False.</span>
+<span class="sd">    :param morpho3 bool: use only morphologies that the last number is equal to 3 (default=False).</span>
+<span class="sd">    :param random_state int: value for pca random_state (default=10).</span>
+
+<span class="sd">    :return X_train_: preprocessed train DataFrame</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    :return X_test_: preprocessed test DataFrame</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    :return y_train_: preprocessed train label</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    :return y_test: preprocessed test label</span>
+<span class="sd">    :rtype: pd.DataFrame</span>
+<span class="sd">    :return feat_cols: list with the features columns names</span>
+<span class="sd">    :rtype: list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Morphology 3</span>
+    <span class="k">if</span> <span class="n">morpho3</span><span class="p">:</span>
+        <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;comportamento&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">i</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">MORFO</span><span class="p">]</span>
+        <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="n">df_aux</span><span class="o">.</span><span class="n">comportamento</span> <span class="o">==</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">df_aux</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;comportamento&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Grouped years</span>
+    <span class="k">if</span> <span class="n">group_years</span> <span class="ow">and</span> <span class="n">first_year</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">last_year</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ANODIAG</span> <span class="o">&gt;=</span> <span class="n">first_year</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_aux</span><span class="o">.</span><span class="n">ANODIAG</span> <span class="o">&lt;=</span> <span class="n">last_year</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Train Test split</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">get_train_test</span><span class="p">(</span><span class="n">df_aux</span><span class="p">,</span> <span class="n">cols_drop</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span>
+                                                      <span class="n">test_size</span><span class="p">,</span>
+                                                      <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+
+    <span class="c1"># Preprocessing</span>
+    <span class="k">if</span> <span class="n">pca</span> <span class="ow">and</span> <span class="n">pca_components</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">X_train_enc</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">pca</span><span class="p">,</span> <span class="n">feat_cols</span> <span class="o">=</span> <span class="n">train_preprocessing</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">encoder_type</span><span class="o">=</span><span class="n">encoder_type</span><span class="p">,</span>
+                                                                     <span class="n">normalizer</span><span class="o">=</span><span class="n">norm_name</span><span class="p">,</span> <span class="n">pca</span><span class="o">=</span><span class="n">pca</span><span class="p">,</span>
+                                                                     <span class="n">pca_components</span><span class="o">=</span><span class="n">pca_components</span><span class="p">,</span>
+                                                                     <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+        <span class="n">X_test_</span> <span class="o">=</span> <span class="n">test_preprocessing</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span>
+                                     <span class="n">encoder_type</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">X_train_enc</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">feat_cols</span> <span class="o">=</span> <span class="n">train_preprocessing</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">encoder_type</span><span class="o">=</span><span class="n">encoder_type</span><span class="p">,</span>
+                                                                <span class="n">normalizer</span><span class="o">=</span><span class="n">norm_name</span><span class="p">)</span>
+        <span class="n">X_test_</span> <span class="o">=</span> <span class="n">test_preprocessing</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">encoder_type</span><span class="p">)</span>
+
+    <span class="c1"># Balancing</span>
+    <span class="k">if</span> <span class="n">balance_data</span><span class="p">:</span>
+        <span class="n">X_train_</span><span class="p">,</span> <span class="n">y_train_</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X_train_enc</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">X_train_</span><span class="p">,</span> <span class="n">y_train_</span> <span class="o">=</span> <span class="n">X_train_enc</span><span class="p">,</span> <span class="n">y_train</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;X_train = </span><span class="si">{</span><span class="n">X_train_</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, X_test = </span><span class="si">{</span><span class="n">X_test_</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;y_train = </span><span class="si">{</span><span class="n">y_train_</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, y_test = </span><span class="si">{</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_enc_norm</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">X_train_</span><span class="p">,</span> <span class="n">X_test_</span><span class="p">,</span> <span class="n">y_train_</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">norm</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">X_train_</span><span class="p">,</span> <span class="n">X_test_</span><span class="p">,</span> <span class="n">y_train_</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">feat_cols</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">show_tree</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">estimator</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Show the Random Forest tree</span>
+
+<span class="sd">    :param model: machine learning model.</span>
+<span class="sd">    :param feat_cols list: list of the features used in the model training.</span>
+<span class="sd">    :param max_depth int: max_depth to show in the tree (default = 3).</span>
+<span class="sd">    :param estimator int: number of the estimator do show the tree (default = 0).</span>
+
+<span class="sd">    :return: no value</span>
+<span class="sd">    :rtype: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">estimators_</span><span class="p">[</span><span class="n">estimator</span><span class="p">],</span>
+                   <span class="n">feature_names</span><span class="o">=</span><span class="n">feat_cols</span><span class="p">,</span>
+                   <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                   <span class="n">max_depth</span><span class="o">=</span><span class="n">max_depth</span><span class="p">);</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">plot_feat_importances</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">feat_cols</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Shows the features importances for the model.</span>
+
+<span class="sd">    :param model: machine learning model.</span>
+<span class="sd">    :param feat_cols list: list of the features used in the model training.</span>
+<span class="sd">    :param n int: number of features to be shown (default=10).</span>
+
+<span class="sd">    :return: no value</span>
+<span class="sd">    :rtype: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">feat_import</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">feat_cols</span><span class="p">)</span>
+    <span class="n">feat_import</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;barh&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">plot_roc_curve</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot the ROC curve for train and test sets.</span>
+
+<span class="sd">    :param model: Trained machine learning model.</span>
+<span class="sd">    :param X_train: Features of training set.</span>
+<span class="sd">    :param X_test: Features of test set.</span>
+<span class="sd">    :param y_train: Label of training set.</span>
+<span class="sd">    :param y_test: Label of test set.</span>
+
+<span class="sd">    :return: no value</span>
+<span class="sd">    :rtype: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">probas_train</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_train</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">probas_test</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">fp_train</span><span class="p">,</span> <span class="n">tp_train</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">probas_train</span><span class="p">)</span>
+    <span class="n">fp_test</span><span class="p">,</span> <span class="n">tp_test</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">probas_test</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fp_train</span><span class="p">,</span> <span class="n">tp_train</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Train (AUC = </span><span class="si">{</span><span class="n">auc</span><span class="p">(</span><span class="n">fp_train</span><span class="p">,</span><span class="w"> </span><span class="n">tp_train</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fp_test</span><span class="p">,</span> <span class="n">tp_test</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Test (AUC = </span><span class="si">{</span><span class="n">auc</span><span class="p">(</span><span class="n">fp_test</span><span class="p">,</span><span class="w"> </span><span class="n">tp_test</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+             <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Baseline&#39;</span><span class="p">,</span>
+             <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span>
+             <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positives&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positives&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">plot_confusion_matrix</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;.3f&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Plot the confusion matrix.</span>
+
+<span class="sd">    :param model: Trained machine learning model.</span>
+<span class="sd">    :param x: Features set.</span>
+<span class="sd">    :param y: Label set.</span>
+<span class="sd">    :param format string: Format for the numbers in the confusion matrix (default &quot;.3f&quot;)</span>
+
+<span class="sd">    :return: no value</span>
+<span class="sd">    :rtype: None</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">rc_context</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;font.weight&#39;</span><span class="p">:</span> <span class="s1">&#39;bold&#39;</span><span class="p">}):</span>
+        <span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">values_format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span>
+                                              <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">plot_shap_values</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">max_display</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot the shap values.</span>
+
+<span class="sd">    :param model: Trained machine learning model.</span>
+<span class="sd">    :param x: Features set.</span>
+<span class="sd">    :param features: Features names.</span>
+<span class="sd">    :param max_display int: Max features to show shap values (default=10)</span>
+
+<span class="sd">    :return: no value</span>
+<span class="sd">    :rtype: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">shap_values</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">model</span><span class="p">)</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">,</span>
+                          <span class="n">feature_names</span><span class="o">=</span><span class="n">features</span><span class="p">,</span>
+                          <span class="n">max_display</span><span class="o">=</span><span class="n">max_display</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+        <span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span>
+                          <span class="n">feature_names</span><span class="o">=</span><span class="n">features</span><span class="p">,</span>
+                          <span class="n">max_display</span><span class="o">=</span><span class="n">max_display</span><span class="p">)</span>
+
+<span class="c1">#-------------------------------------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">roc_together</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">naive_bayes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_forest</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xgboost</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">lightgbm</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">naive_bayes</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">probas_nb</span> <span class="o">=</span> <span class="n">naive_bayes</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">fp_nb</span><span class="p">,</span> <span class="n">tp_nb</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">probas_nb</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fp_nb</span><span class="p">,</span> <span class="n">tp_nb</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Naive Bayes (AUC = </span><span class="si">{</span><span class="n">auc</span><span class="p">(</span><span class="n">fp_nb</span><span class="p">,</span><span class="w"> </span><span class="n">tp_nb</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">random_forest</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">probas_rf</span> <span class="o">=</span> <span class="n">random_forest</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">fp_rf</span><span class="p">,</span> <span class="n">tp_rf</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">probas_rf</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fp_rf</span><span class="p">,</span> <span class="n">tp_rf</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashdot&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Random Forest (AUC = </span><span class="si">{</span><span class="n">auc</span><span class="p">(</span><span class="n">fp_rf</span><span class="p">,</span><span class="w"> </span><span class="n">tp_rf</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">xgboost</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">probas_xgb</span> <span class="o">=</span> <span class="n">xgboost</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">fp_xgb</span><span class="p">,</span> <span class="n">tp_xgb</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">probas_xgb</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fp_xgb</span><span class="p">,</span> <span class="n">tp_xgb</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;XGBoost (AUC = </span><span class="si">{</span><span class="n">auc</span><span class="p">(</span><span class="n">fp_xgb</span><span class="p">,</span><span class="w"> </span><span class="n">tp_xgb</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">lightgbm</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">probas_lgbm</span> <span class="o">=</span> <span class="n">lightgbm</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">fp_lgbm</span><span class="p">,</span> <span class="n">tp_lgbm</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">probas_lgbm</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fp_lgbm</span><span class="p">,</span> <span class="n">tp_lgbm</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LightGBM (AUC = </span><span class="si">{</span><span class="n">auc</span><span class="p">(</span><span class="n">fp_lgbm</span><span class="p">,</span><span class="w"> </span><span class="n">tp_lgbm</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+             <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Baseline&#39;</span><span class="p">,</span>
+             <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span>
+             <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positives&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positives&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentação - Estudo Colorretal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Colorretal%20-%20preprocessing.html" class="btn btn-neutral float-right" title="Leitura dos Dados" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Lucas Buk Cardoso.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
